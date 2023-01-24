@@ -1,7 +1,7 @@
 # wireframes
 
 [23-01-23]
-
+ 
 made components that represent 1920 x 1080 desktop vue and 
 320 x 568 mobile vue
 

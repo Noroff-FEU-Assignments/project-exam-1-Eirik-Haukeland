@@ -6,7 +6,7 @@ wound upp selecting cooking as the subject of the blog
 ## cooking (selected)
 ### pros
 - i have meany recipes i could use
-- inherent category
+- inherent category 
 - many years of experience
 - many sites to draw inspiration form
 - something that is easy to ask others what they need

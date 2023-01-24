@@ -1,6 +1,6 @@
 # inspiration gathering [23-01-23]
 
-## what other say
+## what other say 
 
 as I talked to people that might be using this blog about what they need
 it appears that most get to the sites that they use by googling a dish 
