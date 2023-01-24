@@ -14,7 +14,7 @@ just my initials out of order
 decided to make an about page
 decided to make related posts like: knife use, hygiene, tips and tricks
 
-## home
+## home page
 
 [23-01-23]
 -  made a wireframe component product-card 
@@ -25,7 +25,17 @@ decided to make related posts like: knife use, hygiene, tips and tricks
 - made a footer component for both whit some instance
 - made a wireframe carousel instance for desktop
 
+selected a set of wireframes for mobile and desktop
+
 ## all posts page
+
+[23-1-24]
+
+- made more types of carousels
+- made a tag button
+- made a tags component
+
+selected wireframes for mobile
 
 ## one post page
 
