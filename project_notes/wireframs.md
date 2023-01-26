@@ -67,6 +67,9 @@ the functionality off desktop version
 - made btn component with to variations
 - made text-input and text-box form elements
 - made different variants of text-input field
+- this [example of contact page](https://www.forbrukerradet.no/kontakt-oss/)
+was given me after a tester looked at my wireframe for the
+contact page
 
 [23-01-26]
 
