@@ -11,6 +11,8 @@ the most trusted sites where [matprat](https://www.matprat.no/),
 [den stolte hane](https://www.denstoltehane.no/) as these are not quite
 blogs I search for popular food blogs and got the list detailed below
 
+### desired functionality
+
 - add in the amount of people that the recipes was for and have the 
 ingredients list update
 - lots of god pictures (to se the steps)
