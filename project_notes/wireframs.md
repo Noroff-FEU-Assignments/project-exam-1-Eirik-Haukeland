@@ -138,3 +138,59 @@ remove the popular-recipes carousel
 
 made a tweak to [all posts page](#all-posts-page) wireframe
 and added it as this page
+
+## testing
+
+[23-01-29]
+
+### general
+
+#### contact
+
+happy whit result
+
+have consulted in the making
+
+#### search page and all post page
+
+join to gather these pages in to one page with search field
+
+#### how-to page
+
+integrate in other contests and recipes
+
+#### home
+
+post/recipe tag on the font page like [this](../inspiration_img/font_page_ruff_guide__den_stolte_hane.png)
+or [this](../inspiration_img/font_page_ruff_guide__meny.png)
+
+### desktop
+
+#### home
+
+make home page more like search page
+
+#### recipe page
+
+user wants to set recipe for number of diners
+
+unsure if images relates to the steps
+
+headings for ingredient and steps
+
+### mobile
+
+make the font and spacing smaller to utilize the space 
+better
+
+#### home
+
+the recipe cards takes upp too much space forcing you to 
+scroll no mather what you do
+
+use more of the sides on new page
+
+#### recipe page
+
+ingredients as a collapsable so that you can se recipe
+and ingredients at the same time
