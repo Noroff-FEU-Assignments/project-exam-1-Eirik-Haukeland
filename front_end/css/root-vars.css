@@ -1,0 +1,12 @@
+:root {
+    /*TODO: fix contrast isues on cards*/
+    /*--alt-blue: hsl(200, 40%, 55%);*/
+    --main-blue: hsl(200, 70%, 25%);
+    --alt-blue: hsl(200, 50%, 40%);
+    --text-ligth-bg: hsl(0deg, 0%, 0%);
+    --text-dark-bg: hsl(0deg, 0%, 100%);
+    --card-size: 200px;
+    --card-gap: .5rem;
+    --card-grid-gap: 1.625rem;
+    --page-gap: 1.25rem;
+}

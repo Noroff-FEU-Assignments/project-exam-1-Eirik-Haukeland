@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="css/main.css">
     <meta charset="UTF-8">
     <meta name="description" content="I hope to give you much informateion and self confides about and in the kichen whit the articles and recipes on my blog">
     <title>heb's recipes</title>
 </head>
 <body>
 <header>
-    <a href="index.html">Heb's Recipes</a>
+    <a href="index.html" class="logo">Heb's Recipes</a>
     <div>
         <form role="search">
             <input type="text" name="search-field" id="search-field" placeholder="search">
@@ -24,195 +25,163 @@
     <h1 class="visually-hidden">heb's recipes</h1>
     <section aria-label="charusell">
         <h2>popular recipes</h2>
-        <button aria-label="charusell next"><img src="img/icons/charusell-arrow" alt="next"></button>
-        <button aria-label="charusell previus"><img src="img/icons/charusell-arrow" class="flipp" alt="pervius"></button>
+        <button aria-label="carusell previus sett"><img src="img/icons/charusell-arrow.svg" class="flipp" alt="previus"></button>
         <section aria-label="carusell contents">
-            <article class="recipe-card smal">
-                <a href="temp-recipe.html">
+                <a class="card recipe-card" href="temp-recipe.html">
                     <img src="img/test-imgs/smørgrøt" alt="butter porridge">
                     <h3>butter porridge</h3>
-                    <span><img src="img/icons/" alt="time">30 min</span>
+                    <span><img src="img/icons" alt="time">30 min</span>
                 </a>
-            </article>
-            <article class="recipe-card smal">
-                <a href="temp-recipe.html">
+                <a class="card recipe-card" href="temp-recipe.html">
                     <img src="img/test-imgs/smørgrøt" alt="butter porridge">
                     <h3>butter porridge</h3>
-                    <span><img src="img/icons/" alt="time">30 min</span>
+                    <span><img src="img/icons" alt="time">30 min</span>
                 </a>
-            </article>
-            <article class="recipe-card smal">
-                <a href="temp-recipe.html">
+                <a class="card recipe-card" href="temp-recipe.html">
                     <img src="img/test-imgs/smørgrøt" alt="butter porridge">
                     <h3>butter porridge</h3>
-                    <span><img src="img/icons/" alt="time">30 min</span>
+                    <span><img src="img/icons" alt="time">30 min</span>
                 </a>
-            </article>
-            <article class="recipe-card smal">
-                <a href="temp-recipe.html">
+                <a class="card recipe-card" href="temp-recipe.html">
                     <img src="img/test-imgs/smørgrøt" alt="butter porridge">
                     <h3>butter porridge</h3>
-                    <span><img src="img/icons/" alt="time">30 min</span>
+                    <span><img src="img/icons" alt="time">30 min</span>
                 </a>
-            </article>
-            <article hidden class="recipe-card smal">
-                <a href="temp-recipe.html">
+                <a hidden class="card recipe-card" href="temp-recipe.html">
                     <img src="img/test-imgs/smørgrøt" alt="butter porridge">
                     <h3>butter porridge</h3>
-                    <span><img src="img/icons/" alt="time">30 min</span>
+                    <span><img src="img/icons" alt="time">30 min</span>
                 </a>
-            </article>
-            <article hidden class="recipe-card smal">
-                <a href="temp-recipe.html">
+                <a hidden class="card recipe-card" href="temp-recipe.html">
                     <img src="img/test-imgs/smørgrøt" alt="butter porridge">
                     <h3>butter porridge</h3>
-                    <span><img src="img/icons/" alt="time">30 min</span>
+                    <span><img src="img/icons" alt="time">30 min</span>
                 </a>
-            </article>
-            <article hidden class="recipe-card smal">
-                <a href="temp-recipe.html">
+                <a hidden class="card recipe-card" href="temp-recipe.html">
                     <img src="img/test-imgs/smørgrøt" alt="butter porridge">
                     <h3>butter porridge</h3>
-                    <span><img src="img/icons/" alt="time">30 min</span>
+                    <span><img src="img/icons" alt="time">30 min</span>
                 </a>
-            </article>
-            <article hidden class="recipe-card smal">
-                <a href="temp-recipe.html">
+                <a hidden class="card recipe-card" href="temp-recipe.html">
                     <img src="img/test-imgs/smørgrøt" alt="butter porridge">
                     <h3>butter porridge</h3>
-                    <span><img src="img/icons/" alt="time">30 min</span>
+                    <span><img src="img/icons" alt="time">30 min</span>
                 </a>
-            </article>
         </section>
+        <button aria-label="carusell next sett"><img src="img/icons/charusell-arrow.svg" alt="next"></button>
     </section>
-    <section aria-labelledby="more-articles">
+    <section aria-labelledby="more-articles" class="articles">
         <h2 id="more-articles" class="visually-hidden">more articles</h2>
         <fieldset aria-label="filter tags">
-            <button aria-label="tag">recipes</button>
-            <button aria-label="tag">posts</button>
-            <button aria-label="tag">fish</button>
-            <button aria-label="tag">meat</button>
-            <button aria-label="tag">vegeterian</button>
-            <button aria-label="tag">selebrations</button>
-            <button aria-label="tag">recent</button>
-            <button aria-label="tag">health</button>
-            <button aria-label="tag">budget</button>
-            <button aria-label="tag">dessert</button>
-            <button aria-label="tag">how to</button>
-            <button aria-label="tag">everyday</button>
+            <button aria-label="tag" class="pillshape">recipes</button>
+            <button aria-label="tag" class="pillshape">posts</button>
+            <button aria-label="tag" class="pillshape">fish</button>
+            <button aria-label="tag" class="pillshape">meat</button>
+            <button aria-label="tag" class="pillshape">vegeterian</button>
+            <button aria-label="tag" class="pillshape">selebrations</button>
+            <button aria-label="tag" class="pillshape">recent</button>
+            <button aria-label="tag" class="pillshape">health</button>
+            <button aria-label="tag" class="pillshape">budget</button>
+            <button aria-label="tag" class="pillshape">dessert</button>
+            <button aria-label="tag" class="pillshape">how to</button>
+            <button aria-label="tag" class="pillshape">everyday</button>
         </fieldset>
         <div>
-            <article class="recipe-card large">
-                <a href="temp-recipe.html">
+                <a class="card" data-style="large" href="temp-recipe.html">
                     <img src="img/test-imgs/smørgrøt" alt="butter porridge">
                     <h3>butter porridge</h3>
-                    <span><img src="img/icons/" alt="time">30 min</span>
+                    <span><img src="img/icons" alt="time">30 min</span>
                 </a>
-            </article>
-            <article class="recipe-card smal">
-                <a href="temp-recipe.html">
+                <a class="card" href="temp-recipe.html">
                     <img src="img/test-imgs/smørgrøt" alt="butter porridge">
                     <h3>butter porridge</h3>
-                    <span><img src="img/icons/" alt="time">30 min</span>
+                    <span><img src="img/icons" alt="time">30 min</span>
                 </a>
-            </article>
-            <article class="post-card smal">
-                <a href="temp-aricle.html">
+                <a class="card post-card" href="temp-aricle.html">
                     <img src="img/test-imgs/knive" alt="knive cutting">
                     <h2>knive use</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, doloremque labore necessitatibus quaerat sit temporibus totam velit. Amet at consequatur delectus doloremque ducimus error ex fugiat, illo nulla, officia tempora!</p>
                 </a>
-            </article>
-            <article class="recipe-card smal">
-                <a href="temp-recipe.html">
+                <a class="card" href="temp-recipe.html">
                     <img src="img/test-imgs/smørgrøt" alt="butter porridge">
                     <h3>butter porridge</h3>
-                    <span><img src="img/icons/" alt="time">30 min</span>
+                    <span><img src="img/icons" alt="time">30 min</span>
                 </a>
-            </article>
-            <article  class="recipe-card smal">
-                <a href="temp-recipe.html">
+                <a class="card" href="temp-recipe.html">
                     <img src="img/test-imgs/smørgrøt" alt="butter porridge">
                     <h3>butter porridge</h3>
-                    <span><img src="img/icons/" alt="time">30 min</span>
+                    <span><img src="img/icons" alt="time">30 min</span>
                 </a>
-            </article>
-            <article class="post-card large">
-                <a href="temp-aricle.html">
+                <a class="card post-card" data-style="large" href="temp-aricle.html">
                     <img src="img/test-imgs/knive" alt="knive cutting">
                     <h2>knive use</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, doloremque labore necessitatibus quaerat sit temporibus totam velit. Amet at consequatur delectus doloremque ducimus error ex fugiat, illo nulla, officia tempora!</p>
                 </a>
-            </article>
-            <article class="post-card smal">
-                <a href="temp-aricle.html">
+                <a class="card post-card" href="temp-aricle.html">
                     <img src="img/test-imgs/knive" alt="knive cutting">
                     <h2>knive use</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, doloremque labore necessitatibus quaerat sit temporibus totam velit. Amet at consequatur delectus doloremque ducimus error ex fugiat, illo nulla, officia tempora!</p>
                 </a>
-            </article>
-            <article class="recipe-card smal">
-                <a href="temp-recipe.html">
+                <a class="card" href="temp-recipe.html">
                     <img src="img/test-imgs/smørgrøt" alt="butter porridge">
                     <h3>butter porridge</h3>
-                    <span><img src="img/icons/" alt="time">30 min</span>
+                    <span><img src="img/icons" alt="time">30 min</span>
                 </a>
-            </article>
-            <article class="post-card smal">
-                <a href="temp-aricle.html">
+                <a class="card post-card" href="temp-aricle.html">
                     <img src="img/test-imgs/knive" alt="knive cutting">
                     <h2>knive use</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, doloremque labore necessitatibus quaerat sit temporibus totam velit. Amet at consequatur delectus doloremque ducimus error ex fugiat, illo nulla, officia tempora!</p>
                 </a>
-            </article>
-            <article class="recipe-card large">
-                <a href="temp-recipe.html">
+                <a class="card" data-style="large" href="temp-recipe.html">
                     <img src="img/test-imgs/smørgrøt" alt="butter porridge">
                     <h3>butter porridge</h3>
-                    <span><img src="img/icons/" alt="time">30 min</span>
+                    <span><img src="img/icons" alt="time">30 min</span>
                 </a>
-            </article>
-            <article class="post-card smal">
-                <a href="temp-aricle.html">
+                <a class="card post-card" href="temp-aricle.html">
                     <img src="img/test-imgs/knive" alt="knive cutting">
                     <h2>knive use</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, doloremque labore necessitatibus quaerat sit temporibus totam velit. Amet at consequatur delectus doloremque ducimus error ex fugiat, illo nulla, officia tempora!</p>
                 </a>
-            </article>
-            <article class="recipe-card smal">
-                <a href="temp-recipe.html">
+                <a class="card" href="temp-recipe.html">
                     <img src="img/test-imgs/smørgrøt" alt="butter porridge">
                     <h3>butter porridge</h3>
-                    <span><img src="img/icons/" alt="time">30 min</span>
+                    <span><img srsection[aria-labelledby="more-articles"]c="img/icons" alt="time">30 min</span>
                 </a>
-            </article>
-            <article class="recipe-card smal">
-                <a href="temp-recipe.html">
+                <a class="card" href="temp-recipe.html">
                     <img src="img/test-imgs/smørgrøt" alt="butter porridge">
                     <h3>butter porridge</h3>
-                    <span><img src="img/icons/" alt="time">30 min</span>
+                    <span><img src="img/icons" alt="time">30 min</span>
                 </a>
-            </article>
-            <article class="post-card wide">
-                <a href="temp-aricle.html">
+                <a class="card post-card" data-style="wide" href="temp-aricle.html">
                     <img src="img/test-imgs/knive" alt="knive cutting">
                     <h2>knive use</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, doloremque labore necessitatibus quaerat sit temporibus totam velit. Amet at consequatur delectus doloremque ducimus error ex fugiat, illo nulla, officia tempora!</p>
                 </a>
-            </article>
         </div>
     </section>
 </main>
 <footer>
-    <nav>
+    <!--<nav>
         <a aria-current="page" href="index.html">Home</a>
         <a href="articles.html">Articles</a>
         <a href="contact.html">Contact</a>
-    </nav>
-    <ul>
-        <li><a href="facebook.com"><img src="img/icons/facebook.icon" alt="facebook icon"></a></li>
-        <li><a href="twitter.com"><img src="img/icons/tvitter.icon" alt="twitter icon"></a></li>
-        <li><a href="instagram.com"><img src="img/icons/instagram/shot.jpg" alt="instagram icon"></a></li>
+    </nav>-->
+    <ul aria-label="sosial media liks" class="sosial-links">
+        <li>
+            <a href="https://www.facebook.com">
+                <img src="img/icons/f_logo_RGB-White.svg" alt="go to facebook">
+            </a>
+        </li>
+        <li>
+            <a href="https://www.twitter.com">
+                <img src="img/icons/Twitter_icon/Twitter logo/SVG/Logo white.svg" alt="go to twitter">
+            </a>
+        </li>
+        <li>
+            <a href="https://www.instagram.com">
+                <img src="img/icons/instagram/Instagram Logo Pack/02 White Glyph/Instagram_Glyph_White.svg" alt="go to instagram">
+            </a>
+        </li>
     </ul>
     <span>&#169; 2023 Heb's recipes</span>
 </footer>

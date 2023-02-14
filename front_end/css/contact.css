@@ -1,0 +1,109 @@
+@import "root-vars.css";
+
+.btn {
+    border-width: 0;
+    border-radius: .5rem;
+    background-color: var(--main-blue);
+    color: var(--text-dark-bg);
+}
+
+.btn:where(:hover, :focus-visible, :focus){
+    background-color: var(--alt-blue);
+}
+
+div[aria-label="contact form"] {
+    width: 25rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--card-grid-gap);
+}
+
+div[aria-label="contact form"] > * {
+    grid-column: span 3;
+}
+
+div[aria-label="contact form"] > form {
+    display: grid;
+    grid-row: span 4;
+    grid-template-columns: subgrid;
+    grid-template-rows: repeat(3, min-content) minmax(10rem, auto);
+    column-gap: calc(var(--card-grid-gap) / 2);
+    row-gap: calc(var(--card-grid-gap) / 4);
+    align-items: start;
+    justify-items: start;
+}
+
+div[aria-label="contact form"] > form > * {
+    justify-self: stretch;
+}
+
+div[aria-label="contact form"] > form > label:not(:last-of-type) {
+    grid-row: 1;
+}
+
+div[aria-label="contact form"] > form > input {
+    grid-row: 2;
+    width: 100%;
+    border-width: 0 0 .25rem;
+    border-color: var(--main-blue);
+    padding-inline: .25rem;
+}
+
+div[aria-label="contact form"] > form > label:last-of-type, button {
+    margin-top: calc(var(--card-grid-gap) / 4);
+}
+
+div[aria-label="contact form"] > form > :where(textarea, label:last-of-type) {
+    grid-column: span 3;
+}
+
+div[aria-label="contact form"] > form > textarea {
+    border-width: .25rem .15rem 0;
+    border-color: var(--main-blue);
+    width: 100%;
+    height: 100%;
+    padding: .25rem;
+}
+
+div[aria-label="contact form"] > form > :where(textarea, input):where(:hover, :focus, :focus-visible) {
+    border-color: var(--alt-blue);
+}
+
+div[aria-label="contact form"] > form > button {
+    grid-column: 2;
+}
+
+div[aria-label="contact form"] > button > img {
+    width: 1rem;
+    height: auto;
+}
+
+div[aria-label="contact form"] > button > img.up-arrow {
+    transform: rotate(270deg);
+}
+
+div[aria-label="contact form"] > button > img.down-arrow {
+    transform: rotate(90deg);
+}
+
+#personalia {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    width: 25rem;
+    justify-items: center;
+}
+
+#personalia > :where(h2, p:not(:first-of-type)) {
+    grid-column: span 2;
+}
+
+#personalia > img {
+    width: 10rem;
+    height: auto;
+    border-radius: 50%;
+}
+
+form[hidden="true"] {
+    display: none;
+}

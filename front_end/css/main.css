@@ -1,0 +1,255 @@
+@import "root-vars.css";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: min-content auto min-content;
+    font-size: 1.25rem;
+}
+
+:where(header, card, footer) :where(a, a:visited, li, p, span, h2, h3, h4, h5, h6) {
+    color: var(--text-dark-bg);
+}
+
+header {
+    background-color: var(--main-blue);
+    padding-inline: 4rem;
+    padding-block: 1rem;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.5rem;
+}
+
+nav a {
+    padding: .25rem;
+}
+
+nav > a:not([aria-current="page"]):where(:hover, :focus, :focus-visible) {
+    text-decoration: none;
+    background-color: var(--alt-blue);
+    border-radius: .5rem;
+}
+
+a[aria-current="page"] {
+    text-decoration: none;
+}
+
+.logo {
+    align-self: center;
+    font-size: 2rem;
+    text-decoration: unset;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 2rem;
+    gap: 61px;
+}
+
+.visually-hidden {
+    display: none;
+}
+
+div:has(h1) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--page-gap);
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+section[aria-label="charusell"] {
+    display: grid;
+    grid-template-rows: min-content var(--card-size);
+    grid-template-columns: min-content repeat(4, var(--card-size)) min-content;
+    column-gap: var(--card-grid-gap);
+    row-gap: var(--page-gap);
+}
+
+section[aria-label="charusell"] > h2 {
+    grid-column: span 6;
+    justify-self: center;
+    font-size: 2rem;
+}
+
+section[aria-label="charusell"] > button {
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background: unset;
+    border: .25rem solid black;
+    border-radius: 50%;
+    padding: 1rem;
+}
+
+section[aria-label="charusell"] > button:where(:hover, :focus) {
+    background-color: var(--alt-blue);
+}
+
+section[aria-label="charusell"] > button > img {
+    height: 2.6rem;
+}
+
+section[aria-label="carusell contents"] {
+    grid-column: span 4;
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-auto-flow: column;
+    gap: inherit;
+}
+
+/*section[aria-label="charusell"] > button:where(:hover, :focus, :focus-visible) > img > svg {
+    !*todo: change fill color of carusell arrow on hoverq*!
+    fill: white;
+}*/
+
+.flipp {
+    transform: rotate(180deg);
+}
+
+.pillshape {
+    padding: .5rem 1rem;
+    border: .1rem solid black ;
+    border-radius: 1rem 1rem 1rem 1rem/ 50% 50% 50% 50%;
+    text-align: center;
+}
+
+.articles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--page-gap);
+}
+
+fieldset[aria-label="filter tags"] {
+    width: max(320px, 30vw);
+    border: unset;
+}
+
+button[aria-label="tag"] {
+    margin: .25rem;
+    background-color: unset;
+    white-space: nowrap;
+}
+
+button[aria-label="tag"]:where(:hover, :focus, :focus-visible) {
+    background-color: var(--alt-blue);
+    color: var(--text-dark-bg);
+}
+
+.articles > div {
+    display: grid;
+    grid-template-columns: repeat(5, var(--card-size));
+    grid-auto-rows: var(--card-size);
+    gap: var(--card-grid-gap);
+}
+
+.card {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: auto repeat(2, min-content);
+    background-color: var(--main-blue);
+    justify-items: center;
+    overflow: hidden;
+    padding-bottom: .5rem;
+    gap: .5rem;
+    text-decoration: unset;
+}
+
+.card:where(:hover, :focus) {
+    background-color: var(--alt-blue);
+}
+
+.card > :where(h2, h3, h4) {
+    padding-top: .5rem;
+}
+
+.card > :not(img) {
+    align-self: center;
+    color: #ffffff;
+}
+
+.card > img{
+    object-fit: cover;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.card[data-style="large"] {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.card[data-style="wide"] {
+    grid-column: span 2;
+}
+
+*[hidden] {
+    display: none;
+}
+
+.post-card > p{
+    display: -webkit-inline-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    padding-inline: 1rem;
+}
+
+.post-card[data-style="large"] > p{
+    -webkit-line-clamp: 4;
+}
+
+.sosial-links[data-style="on-page"] {
+    display: flex;
+    gap: 23px;
+    align-items: center;
+}
+
+.sosial-links[data-style="on-page"] > li > a > img {
+    width: 2.5rem;
+}
+
+footer {
+    background-color: var(--main-blue);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: .5rem;
+    padding-block: 1rem;
+}
+
+footer > * {
+    display: flex;
+    gap: 1rem;
+}
+
+.sosial-links {
+    list-style: none;
+}
+
+ .sosial-links > li > a > img {
+     width: 1.75rem;
+     height: auto;
+ }
