@@ -6,11 +6,15 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 16px;
+}
+
 body {
+    height: 100vh;
     height: 100svh;
     display: grid;
     grid-template-rows: min-content auto min-content;
-    font-size: var(--font-size);
 }
 
 :where(header, card, footer) :where(a, a:visited, li, p, span, h2, h3, h4, h5, h6) {
@@ -63,7 +67,14 @@ main {
 }
 
 .visually-hidden {
-    display: none;
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    font-size: 0px;
+    border: none;
+    background-color: unset;
+    left: 0;
+    top: 0;
 }
 
 div:has(h1) {
@@ -152,15 +163,17 @@ fieldset[aria-label="filter tags"] {
     grid-template-rows: repeat(2, min-content);
     grid-auto-flow: column;
     border: none;
+    gap: .25rem;
 }
 
-button[aria-label="tag"] {
+.tag {
+    max-width: min-content !important;
     margin: .25rem;
     background-color: white;
     white-space: nowrap;
 }
 
-button[aria-label="tag"]:where(:hover, :focus, :focus-visible) {
+.tag:where(:hover, :focus, :focus-visible) {
     background-color: var(--alt-blue);
     color: var(--text-dark-bg);
 }
@@ -307,7 +320,7 @@ footer > * {
     }
 
     section[aria-label="carusell contents"] {
-        /*width: 100vw;*/
+        max-width: 100vw;
         overflow-x: scroll;
         padding-inline: .5rem;
         grid-column: span 6;
@@ -326,9 +339,9 @@ footer > * {
 }
 
 @media only screen and (max-width: 700px) {
-    body{
+/*    body{
         font-size: var(--font-size);
-    }
+    }*/
 
     header {
         padding-inline: 1rem;
@@ -350,12 +363,13 @@ footer > * {
     }
 
     fieldset[aria-label="filter tags"] {
-        height: 5.2rem;
+        height: 7rem;
         width: 100%;
         background-color: var(--ligth-blue);
         display: flex;
         flex-flow: column;
         flex-wrap: wrap;
+        justify-content: center;
         overflow-x: scroll;
     }
 }

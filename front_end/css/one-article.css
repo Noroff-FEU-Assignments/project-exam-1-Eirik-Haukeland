@@ -116,3 +116,9 @@ img {
         height: 15rem;
     }
 }
+
+@media only screen and (max-width: 400px) {
+    #ingredients-list {
+        width: 100%;
+    }
+}
