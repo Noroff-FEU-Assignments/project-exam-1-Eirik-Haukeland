@@ -2,7 +2,7 @@ const carusell_cards = document.querySelector('#carusell_content');
 fetch("https://examapi.ebh.fyi/wp-json/wp/v2/wprm_recipe")
   .then(response => response.json())
   .then(response => {
-    console.log(response);
+    // console.log(response);
     response.forEach(recipe => {
       const card = document.createElement("a");
       card.innerHTML = `
