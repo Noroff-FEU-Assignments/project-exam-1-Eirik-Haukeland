@@ -3,6 +3,7 @@
 <head>
     <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/main.css">
+    <script type="module" src="js/contact.js" defer></script>
     <meta charset="UTF-8">
     <meta name="description" content="Here you whil find information about me the creater of this blogg as whell as a way to contact me">
     <title>heb's recipes | Contact & about</title>
@@ -10,7 +11,7 @@
 <body>
 <header>
     <a href="index.html" class="logo">Heb's Recipes</a>
-    <div>
+    <div id="menu">
         <form role="search">
             <input type="text" name="search-field" id="search-field" placeholder="search">
             <button type="submit"><img src="img/icons/search.webp" alt="search"></button>
@@ -44,8 +45,8 @@
         </ul>
     </div>
     <div aria-label="contact form">
-        <button class="btn" state="colsed">Contact Form <img src="img/icons/charusell-arrow.svg" class="down-arrow" alt="arrow puinting up"></button>
-        <form hidden action="">
+        <button id="open_or_close" class="btn" state="colsed">Contact Form <img src="img/icons/charusell-arrow.svg" class="down-arrow" alt="arrow puinting up"></button>
+        <form id="hide_me" hidden action="">
             <label for="name-field">name:</label>
             <input type="text"
                    name="name-field"

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script defer type="module" src="js/carusell.js"></script>
     <link rel="stylesheet" href="css/main.css">
     <meta charset="UTF-8">
     <meta name="description" content="I hope to give you much informateion and self confides about and in the kichen whit the articles and recipes on my blog">
@@ -9,7 +10,7 @@
 <body>
 <header>
     <a href="index.html" class="logo">Heb's Recipes</a>
-    <div>
+    <div id="menu">
         <form role="search">
             <input type="text" name="search-field" id="search-field" placeholder="search">
             <button type="submit"><img src="img/icons/search.webp" alt="search"></button>
@@ -25,50 +26,60 @@
     <h1 class="visually-hidden">heb's recipes</h1>
     <section aria-label="charusell">
         <h2>popular recipes</h2>
-        <button aria-label="carusell previus sett"><img src="img/icons/charusell-arrow.svg" class="flipp" alt="previus"></button>
-        <section aria-label="carusell contents">
+        <button id="carusell_previus_btn" aria-label="carusell previus sett"><img src="img/icons/charusell-arrow.svg" class="flipp" alt="previus"></button>
+        <section id="carusell_content" aria-label="carusell contents">
                 <a class="card recipe-card" href="temp-recipe.html">
                     <img src="img/test-imgs/smørgrøt" alt="butter porridge">
-                    <h3>butter porridge</h3>
-                    <span><img src="img/icons" alt="time">30 min</span>
-                </a>
-                <a class="card recipe-card" href="temp-recipe.html">
-                    <img src="img/test-imgs/smørgrøt" alt="butter porridge">
-                    <h3>butter porridge</h3>
+                    <h3>1 butter porridge</h3>
                     <span><img src="img/icons" alt="time">30 min</span>
                 </a>
                 <a class="card recipe-card" href="temp-recipe.html">
                     <img src="img/test-imgs/smørgrøt" alt="butter porridge">
-                    <h3>butter porridge</h3>
+                    <h3>2 butter porridge</h3>
                     <span><img src="img/icons" alt="time">30 min</span>
                 </a>
                 <a class="card recipe-card" href="temp-recipe.html">
                     <img src="img/test-imgs/smørgrøt" alt="butter porridge">
-                    <h3>butter porridge</h3>
+                    <h3>3 butter porridge</h3>
+                    <span><img src="img/icons" alt="time">30 min</span>
+                </a>
+                <a class="card recipe-card" href="temp-recipe.html">
+                    <img src="img/test-imgs/smørgrøt" alt="butter porridge">
+                    <h3>4 butter porridge</h3>
                     <span><img src="img/icons" alt="time">30 min</span>
                 </a>
                 <a hidden class="card recipe-card" href="temp-recipe.html">
                     <img src="img/test-imgs/smørgrøt" alt="butter porridge">
-                    <h3>butter porridge</h3>
+                    <h3>5 butter porridge</h3>
                     <span><img src="img/icons" alt="time">30 min</span>
                 </a>
                 <a hidden class="card recipe-card" href="temp-recipe.html">
                     <img src="img/test-imgs/smørgrøt" alt="butter porridge">
-                    <h3>butter porridge</h3>
+                    <h3>6 butter porridge</h3>
                     <span><img src="img/icons" alt="time">30 min</span>
                 </a>
                 <a hidden class="card recipe-card" href="temp-recipe.html">
                     <img src="img/test-imgs/smørgrøt" alt="butter porridge">
-                    <h3>butter porridge</h3>
+                    <h3>7 butter porridge</h3>
                     <span><img src="img/icons" alt="time">30 min</span>
                 </a>
                 <a hidden class="card recipe-card" href="temp-recipe.html">
                     <img src="img/test-imgs/smørgrøt" alt="butter porridge">
-                    <h3>butter porridge</h3>
+                    <h3>8 butter porridge</h3>
                     <span><img src="img/icons" alt="time">30 min</span>
                 </a>
+            <a hidden class="card recipe-card" href="temp-recipe.html">
+                <img src="img/test-imgs/smørgrøt" alt="butter porridge">
+                <h3>9 butter porridge</h3>
+                <span><img src="img/icons" alt="time">30 min</span>
+            </a>
+            <a hidden class="card recipe-card" href="temp-recipe.html">
+                <img src="img/test-imgs/smørgrøt" alt="butter porridge">
+                <h3>10 butter porridge</h3>
+                <span><img src="img/icons" alt="time">30 min</span>
+            </a>
         </section>
-        <button aria-label="carusell next sett"><img src="img/icons/charusell-arrow.svg" alt="next"></button>
+        <button id="carusell_next_btn" aria-label="carusell next sett"><img src="img/icons/charusell-arrow.svg" alt="next"></button>
     </section>
     <section aria-labelledby="more-articles" class="articles">
         <h2 id="more-articles" class="visually-hidden">more articles</h2>

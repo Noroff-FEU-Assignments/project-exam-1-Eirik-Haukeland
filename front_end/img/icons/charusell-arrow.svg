@@ -25,26 +25,15 @@
      inkscape:document-units="px"
      showgrid="false"
      showguides="true"
-     inkscape:zoom="2.8284271"
-     inkscape:cx="207.53584"
-     inkscape:cy="62.402173"
+     inkscape:zoom="5.6568543"
+     inkscape:cx="56.568542"
+     inkscape:cy="52.591067"
      inkscape:window-width="1916"
-     inkscape:window-height="1092"
+     inkscape:window-height="1118"
      inkscape:window-x="1920"
-     inkscape:window-y="78"
+     inkscape:window-y="52"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1">
-    <sodipodi:guide
-       position="1.6138146,28.629719"
-       orientation="1,0"
-       id="guide904"
-       inkscape:locked="false" />
-    <sodipodi:guide
-       position="24.888314,29.929882"
-       orientation="1,0"
-       id="guide967"
-       inkscape:locked="false" />
-  </sodipodi:namedview>
+     inkscape:current-layer="layer1" />
   <defs
      id="defs2" />
   <g
@@ -53,7 +42,7 @@
      id="layer1">
     <path
        sodipodi:type="star"
-       style="fill:#000000;stroke:none;stroke-width:0;stroke-dasharray:none"
+       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0;stroke-dasharray:none"
        id="path348"
        inkscape:flatsided="false"
        sodipodi:sides="3"
@@ -66,8 +55,8 @@
        inkscape:rounded="0"
        inkscape:randomized="0"
        d="m 12.632742,6.5722537 -2.6782859,1.5463092 -2.678286,1.5463091 0,-3.0926184 0,-3.0926182 2.6782861,1.5463092 z"
-       inkscape:transform-center-x="-4.4097205"
-       transform="matrix(4.9394151,0,0,4.277659,-35.940025,-14.884694)"
+       inkscape:transform-center-x="-3.968748"
+       transform="matrix(4.4454736,0,0,3.8498931,-29.700189,-12.073308)"
        inkscape:export-filename="path348.png"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96" />

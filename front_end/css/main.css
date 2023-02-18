@@ -7,10 +7,10 @@
 }
 
 body {
-    height: 100vh;
+    height: 100svh;
     display: grid;
     grid-template-rows: min-content auto min-content;
-    font-size: 1.25rem;
+    font-size: var(--font-size);
 }
 
 :where(header, card, footer) :where(a, a:visited, li, p, span, h2, h3, h4, h5, h6) {
@@ -25,6 +25,7 @@ header {
     justify-content: space-between;
     position: sticky;
     top: 0;
+    z-index: 1;
 }
 
 nav {
@@ -107,6 +108,11 @@ section[aria-label="charusell"] > button:where(:hover, :focus) {
 
 section[aria-label="charusell"] > button > img {
     height: 2.6rem;
+    width: auto;
+}
+
+section[aria-label="charusell"] > button > img > svg > g > path {
+    fill: #ffffff;
 }
 
 section[aria-label="carusell contents"] {
@@ -134,6 +140,7 @@ section[aria-label="carusell contents"] {
 }
 
 .articles {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -141,13 +148,15 @@ section[aria-label="carusell contents"] {
 }
 
 fieldset[aria-label="filter tags"] {
-    width: max(320px, 30vw);
-    border: unset;
+    display: grid;
+    grid-template-rows: repeat(2, min-content);
+    grid-auto-flow: column;
+    border: none;
 }
 
 button[aria-label="tag"] {
     margin: .25rem;
-    background-color: unset;
+    background-color: white;
     white-space: nowrap;
 }
 
@@ -205,10 +214,6 @@ button[aria-label="tag"]:where(:hover, :focus, :focus-visible) {
     grid-column: span 2;
 }
 
-*[hidden] {
-    display: none;
-}
-
 .post-card > p{
     display: -webkit-inline-box;
     -webkit-box-orient: vertical;
@@ -253,3 +258,102 @@ footer > * {
      width: 1.75rem;
      height: auto;
  }
+
+@media only screen and (max-width: 1200px) {
+    section[aria-label="charusell"] {
+        grid-template-columns: min-content repeat(3, var(--card-size)) min-content;
+    }
+
+    section[aria-label="carusell contents"] {
+        display: grid;
+        grid-column: 2/ span 3;
+        grid-template-columns: repeat(3, var(--card-size));
+    }
+
+    .articles > div {
+        grid-template-columns: repeat(3, var(--card-size));
+        grid-auto-flow: dense;
+    }
+
+    /*.card[data-style="large"]:nth-of-type(odd) {*/
+    /*    grid-column: 3 / span 2;*/
+    /*}*/
+}
+
+@media only screen and (max-width: 1000px) {
+    .articles > div {
+        grid-template-columns: repeat(3, var(--card-size));
+        grid-auto-flow: dense;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    section[aria-label="charusell"] > button {
+        display: none;
+    }
+
+    section[aria-label="charusell"] {
+        position: relative;
+        left: 0;
+        right: 0;
+        grid-template-columns: auto;
+        grid-template-rows: min-content var(--card-size);
+    }
+
+    section[aria-label="carusell contents"] {
+        /*width: 100vw;*/
+        overflow-x: scroll;
+        padding-inline: .5rem;
+        grid-column: span 6;
+        grid-template-columns: repeat(auto, var(--card-size));
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    section[aria-label="carusell contents"] > .card {
+        width: var(--card-size);
+    }
+
+    :where(section[aria-label="carusell contents"], fieldset[aria-label="filter tags"])::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    body{
+        font-size: var(--font-size);
+    }
+
+    header {
+        padding-inline: 1rem;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    .articles {
+        align-items: center;
+        position: sticky;
+        right: 0;
+    }
+
+    .articles > div {
+        grid-template-columns: repeat(2, var(--card-size));
+        grid-auto-flow: dense;
+    }
+
+    fieldset[aria-label="filter tags"] {
+        height: 5.2rem;
+        width: 100%;
+        background-color: var(--ligth-blue);
+        display: flex;
+        flex-flow: column;
+        flex-wrap: wrap;
+        overflow-x: scroll;
+    }
+}
+
+*[hidden] {
+    display: none !important;
+}
