@@ -195,6 +195,7 @@ button[aria-label="tag"]:where(:hover, :focus, :focus-visible) {
 
 .card > :not(img) {
     align-self: center;
+    justify-self: center;
     color: #ffffff;
 }
 
@@ -203,6 +204,11 @@ button[aria-label="tag"]:where(:hover, :focus, :focus-visible) {
     overflow: hidden;
     width: 100%;
     height: 100%;
+}
+
+.card > span > img[alt="time"] {
+    height: auto;
+    width: 1.15rem;
 }
 
 .card[data-style="large"] {
