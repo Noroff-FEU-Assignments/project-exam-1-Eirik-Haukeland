@@ -6,6 +6,8 @@
     --text-ligth-bg: hsl(0deg, 0%, 0%);
     --text-dark-bg: hsl(0deg, 0%, 100%);
 
+    --menu-position-top: 201px;
+
     --card-size: 12.5rem;
     --card-gap: .5rem;
     --card-grid-gap: 1.625rem;

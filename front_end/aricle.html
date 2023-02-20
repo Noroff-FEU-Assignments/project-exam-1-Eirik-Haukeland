@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script defer type="module" src="js/menu.js"></script>
   <script src="js/carusell.js" defer type="module"></script>
   <meta charset="UTF-8">
   <meta name="description" content="get from article">
@@ -8,17 +9,20 @@
 </head>
 <body>
 <header>
-  <a href="index.html">Heb's Recipes</a>
-  <div>
-    <form role="search">
-      <input type="text" name="search-field" id="search-field" placeholder="search">
-      <button type="submit"><img src="img/icons/search.webp" alt="search"></button>
-    </form>
-    <nav>
-      <a aria-current="page" href="index.html">Home</a>
-      <a href="articles.html">Articles</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+  <a href="index.html" class="logo">Heb's Recipes</a>
+  <div id="menu">
+    <button><img src="img/icons/men-colsed.svg" alt="menu-icon open"></button>
+    <div id="menu-div">
+      <form role="search">
+        <input type="text" name="search-field" id="search-field" placeholder="search">
+        <button type="submit"><img src="img/icons/search.svg" alt="search"></button>
+      </form>
+      <nav>
+        <a aria-current="page" href="index.html">Home</a>
+        <a href="articles.html">Articles</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
   </div>
 </header>
 <main>
@@ -33,7 +37,7 @@
 </main>
 <footer>
   <nav>
-    <a aria-current="page" href="index.html">Home</a>
+    <a href="index.html">Home</a>
     <a href="articles.html">Articles</a>
     <a href="contact.html">Contact</a>
   </nav>

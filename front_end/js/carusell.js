@@ -1,7 +1,6 @@
 const next_btn = document.querySelector("#carusell_next_btn");
 const previus_btn = document.querySelector("#carusell_previus_btn");
 const carusell_cards = document.querySelector('#carusell_content');
-console.table(carusell_cards);
 
 const changeHidden = (elements) => {
   elements.forEach((el, index) => {
@@ -26,10 +25,11 @@ const changeHidden = (elements) => {
 }
 
 changeHidden([...carusell_cards.children]);
-window.onresize = () => changeHidden([...carusell_cards.children]);
+window.addEventListener("resize", () => {
+  changeHidden([...carusell_cards.children]);
+});
 
 const move_items = (list, dir, amount) => {
-  console.log(list.slice(0, 3))
   const cards = []
   for (let i = 0; i < amount; i++) {
     if (dir === "next") {
