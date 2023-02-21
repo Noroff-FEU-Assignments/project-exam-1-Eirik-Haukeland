@@ -8,24 +8,18 @@ const sett_css_var__menu_position_top = () => {
   root.style.setProperty("--menu-position-top", `${header_heigth}`)
 }
 
+if (window.innerWidth < 700 && !menuItmes.hasAttribute("hidden")) {
+  menuItmes.setAttribute("hidden", "true");
+  sett_css_var__menu_position_top();
+}
 
 menuBtn.onclick = () => {
   menuItmes.toggleAttribute("hidden");
   if (!menuItmes.hasAttribute("hidden")) {
     sett_css_var__menu_position_top();
-  } else {
-    root.style.setProperty("--menu-position-top", "0px")
   }
 }
 
-document.addEventListener("load", (evt) => {
-  console.log("loaded")
-  if (window.innerWidth < 700 && !menuItmes.hasAttribute("hidden")) {
-    sett_css_var__menu_position_top();
-    menuItmes.setAttribute("hidden", true);
-  }
-})
-console.log("test")
 window.addEventListener("resize", () => {
   if (window.innerWidth < 700 && !menuItmes.hasAttribute("hidden")) {
     menuItmes.setAttribute("hidden", "true");

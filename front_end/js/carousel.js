@@ -1,6 +1,6 @@
-const next_btn = document.querySelector("#carusell_next_btn");
-const previus_btn = document.querySelector("#carusell_previus_btn");
-const carusell_cards = document.querySelector('#carusell_content');
+const next_btn = document.querySelector("#carousel_next_btn");
+const previus_btn = document.querySelector("#carousel_previus_btn");
+const carousel_cards = document.querySelector('#carousel_content');
 
 const changeHidden = (elements) => {
   elements.forEach((el, index) => {
@@ -24,9 +24,9 @@ const changeHidden = (elements) => {
   })
 }
 
-changeHidden([...carusell_cards.children]);
+changeHidden([...carousel_cards.children]);
 window.addEventListener("resize", () => {
-  changeHidden([...carusell_cards.children]);
+  changeHidden([...carousel_cards.children]);
 });
 
 const move_items = (list, dir, amount) => {
@@ -45,7 +45,7 @@ const move_items = (list, dir, amount) => {
   }
 }
 
-const move_carusell = (nodelist, dir) => {
+const move_carousel = (nodelist, dir) => {
   let nList
   if (dir === "next" && window.innerWidth >= 900 && window.innerWidth <= 1200) {
     nList = move_items(nodelist, "next", 3);
@@ -56,16 +56,16 @@ const move_carusell = (nodelist, dir) => {
   } else if (dir === "previus" && window.innerWidth >= 1200) {
     nList = move_items(nodelist, "previus", 4);
   }
-  carusell_cards.innerHTML = "";
-  nList.forEach(el => carusell_cards.appendChild(el))
+  carousel_cards.innerHTML = "";
+  nList.forEach(el => carousel_cards.appendChild(el))
 }
 
 previus_btn.onclick = () => {
-  move_carusell([...carusell_cards.children], "previus");
-  changeHidden([...carusell_cards.children]);
+  move_carousel([...carousel_cards.children], "previus");
+  changeHidden([...carousel_cards.children]);
 };
 
 next_btn.onclick = () => {
-  move_carusell([...carusell_cards.children], "next");
-  changeHidden([...carusell_cards.children]);
+  move_carousel([...carousel_cards.children], "next");
+  changeHidden([...carousel_cards.children]);
 };

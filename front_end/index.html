@@ -1,9 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Hotjar Tracking Code for exam-project -->
+    <script>
+      (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:3375823,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
     <script defer type="module" src="js/menu.js"></script>
     <script defer type="module" src="js/get_info.js"></script>
-    <script defer type="module" src="js/carusell.js"></script>
+    <script defer type="module" src="js/carousel.js"></script>
     <link rel="stylesheet" href="css/main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
@@ -30,11 +41,11 @@
 </header>
 <main>
     <h1 class="visually-hidden">heb's recipes</h1>
-    <section aria-label="charusell">
+    <section aria-label="carousel">
         <h2>popular recipes</h2>
-        <button id="carusell_previus_btn" aria-label="carusell previus sett"><img src="img/icons/charusell-arrow.svg" class="flipp" alt="previus"></button>
-        <section id="carusell_content" aria-label="carusell contents"></section>
-        <button id="carusell_next_btn" aria-label="carusell next sett"><img src="img/icons/charusell-arrow.svg" alt="next"></button>
+        <button id="carousel_previus_btn" aria-label="carousel previus sett"><img src="img/icons/carousel-arrow.svg" class="flipp" alt="previus"></button>
+        <section id="carousel_content" aria-label="carousel contents"></section>
+        <button id="carousel_next_btn" aria-label="carousel next sett"><img src="img/icons/carousel-arrow.svg" alt="next"></button>
     </section>
     <section class="articles">
         <fieldset aria-label="filter tags">

@@ -57,6 +57,21 @@ img {
     gap: calc(var(--page-gap) / 2);
 }
 
+img.img-zoom {
+    z-index: 1;
+    position: fixed;
+    left: var(--zoom-img-left);
+    top: var(--zoom-img-top);
+    width: 80vw;
+    height: auto;
+}
+
+img.img-zoom:before {
+    width: 100vw;
+    height: 100vh;
+    background-color: hsla(var(--main-blue), 20%);
+}
+
 @media only screen and (max-width: 1200px) {
     #post > div {
         width: 70vw;
@@ -114,6 +129,10 @@ img {
 
     #post > div > img {
         height: 15rem;
+    }
+
+    img.img-zoom {
+        width: 100vw;
     }
 }
 

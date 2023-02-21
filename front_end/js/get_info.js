@@ -1,4 +1,4 @@
-const carusell_cards = document.querySelector('#carusell_content');
+const carousel_cards = document.querySelector('#carousel_content');
 fetch("https://examapi.ebh.fyi/wp-json/wp/v2/wprm_recipe")
   .then(response => response.json())
   .then(response => {
@@ -11,6 +11,6 @@ fetch("https://examapi.ebh.fyi/wp-json/wp/v2/wprm_recipe")
                         <span><img src="img/icons/time.svg" alt="time">30 min</span>`
       card.setAttribute("href", `aricle.html?id=${recipe.id}`)
       card.classList.add("card");
-      carusell_cards.appendChild(card);
+      carousel_cards.appendChild(card);
     })
   })
