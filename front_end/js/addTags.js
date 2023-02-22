@@ -46,20 +46,14 @@ export default (list, appendLocation, cardappendLocation, cardMoreBtn) => {
     checkBox.value = tag.term_id;
 
     label.appendChild(checkBox);
-    label.addEventListener("click", (evt) => {
+
+    label.addEventListener("mousedown", (evt) => {
       const checkbox = evt.target.lastChild;
       const label = evt.target;
       const parrent = evt.target.parentNode;
-
-      // todo: finn ut hva som er feil
-      /*console.log(checkbox.hasAttributes("checked"))
-      if (checkbox.hasAttributes("checked")) {
-        checkbox.removeAttribute("checked");
-      } else {
-        checkbox.setAttribute("checked", true);
-      }*/
       label.classList.toggle("checked")
 
+      console.log(label.classList);
 
       const hasTag = [];
       list.forEach(item => {
@@ -85,8 +79,8 @@ export default (list, appendLocation, cardappendLocation, cardMoreBtn) => {
           siblig.hidden = true;
         }
       })
-
     })
+//     cardMoreBtn.addEventListener("click", () => addArticles(response, cardappendLocation, cardMoreBtn));
 
     appendLocation.appendChild(label)
   })

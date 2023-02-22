@@ -7,7 +7,7 @@ const articles_tags = document.querySelector("section.articles > fieldset")
 const articles_section = document.querySelector("section.articles > div");
 const moreArticlesBtn = document.querySelector("#more_articles_btn")
 
-fetch("https://examapi.ebh.fyi/wp-json/wp/v2/wprm_recipe")
+fetch("https://examapi.ebh.fyi/wp-json/wp/v2/wprm_recipe?per_page=100")
   .then(response => response.json())
   .then(response => {
     response.forEach(recipe => {
