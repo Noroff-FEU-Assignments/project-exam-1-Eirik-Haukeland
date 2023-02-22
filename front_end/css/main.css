@@ -175,17 +175,21 @@ fieldset[aria-label="filter tags"] {
     gap: .25rem;
 }
 
-.tag {
+.tag,
+#more_articles_btn {
     max-width: min-content !important;
     margin: .25rem;
     background-color: white;
     white-space: nowrap;
 }
 
-.tag:where(:hover, :focus, :focus-visible) {
-    background-color: var(--alt-blue);
+.tag.checked,
+:where(.tag, #more_articles_btn):where(:hover, :focus, :focus-visible) {
+    background-color: var(--alt-blue) !important;
     color: var(--text-dark-bg);
 }
+
+
 
 .articles > div {
     display: grid;

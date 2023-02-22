@@ -2,7 +2,7 @@ const next_btn = document.querySelector("#carousel_next_btn");
 const previus_btn = document.querySelector("#carousel_previus_btn");
 const carousel_cards = document.querySelector('#carousel_content');
 
-const changeHidden = (elements) => {
+export const changeHidden = (elements) => {
   elements.forEach((el, index) => {
     if (window.innerWidth <= 900) {
       el.removeAttribute("hidden");
@@ -26,7 +26,7 @@ const changeHidden = (elements) => {
 
 changeHidden([...carousel_cards.children]);
 window.addEventListener("resize", () => {
-  changeHidden([...carousel_cards.children]);
+
 });
 
 const move_items = (list, dir, amount) => {

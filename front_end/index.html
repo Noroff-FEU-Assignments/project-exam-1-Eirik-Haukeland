@@ -13,8 +13,8 @@
       })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
     </script>
     <script defer type="module" src="js/menu.js"></script>
-    <script defer type="module" src="js/get_info.js"></script>
     <script defer type="module" src="js/carousel.js"></script>
+    <script defer type="module" src="js/index.js"></script>
     <link rel="stylesheet" href="css/main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
@@ -48,100 +48,12 @@
         <button id="carousel_next_btn" aria-label="carousel next sett"><img src="img/icons/carousel-arrow.svg" alt="next"></button>
     </section>
     <section class="articles">
-        <fieldset aria-label="filter tags">
-            <label class="pillshape tag">recipe<input class="visually-hidden" type="checkbox" name="recipe-tag"></label>
-            <label class="pillshape tag">posts<input class="visually-hidden" type="checkbox" aria-label="tag"></label>
-            <label class="pillshape tag">fish<input class="visually-hidden" type="checkbox" aria-label="tag"></label>
-            <label class="pillshape tag">meat<input class="visually-hidden" type="checkbox" aria-label="tag"></label>
-            <label class="pillshape tag">vegetarian<input class="visually-hidden" type="checkbox" aria-label="tag"></label>
-            <label class="pillshape tag">selabration<input class="visually-hidden" type="checkbox" aria-label="tag"></label>
-            <label class="pillshape tag">recent<input class="visually-hidden" type="checkbox" aria-label="tag"></label>
-            <label class="pillshape tag">health<input class="visually-hidden" type="checkbox" aria-label="tag"></label>
-            <label class="pillshape tag">budget<input class="visually-hidden" type="checkbox" aria-label="tag"></label>
-            <label class="pillshape tag">dessert<input class="visually-hidden" type="checkbox" aria-label="tag"></label>
-            <label class="pillshape tag">how to<input class="visually-hidden" type="checkbox" aria-label="tag"></label>
-            <label class="pillshape tag">everyday<input class="visually-hidden" type="checkbox" aria-label="tag"></label>
-        </fieldset>
-        <div>
-            <a class="card" data-style="large" href="temp-recipe.html">
-                <img src="img/test-imgs/smørgrøt" alt="butter porridge">
-                <h3>butter porridge</h3>
-                <span><img src="img/icons/time.svg" alt="time">30 min</span>
-            </a>
-            <a class="card" href="temp-recipe.html">
-                <img src="img/test-imgs/smørgrøt" alt="butter porridge">
-                <h3>butter porridge</h3>
-                <span><img src="img/icons/time.svg" alt="time">30 min</span>
-            </a>
-            <a class="card post-card" href="temp-aricle.html">
-                <img src="img/test-imgs/knive" alt="knive cutting">
-                <h2>knive use</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, doloremque labore necessitatibus quaerat sit temporibus totam velit. Amet at consequatur delectus doloremque ducimus error ex fugiat, illo nulla, officia tempora!</p>
-            </a>
-            <a class="card" href="temp-recipe.html">
-                <img src="img/test-imgs/smørgrøt" alt="butter porridge">
-                <h3>butter porridge</h3>
-                <span><img src="img/icons/time.svg" alt="time">30 min</span>
-            </a>
-            <a class="card" href="temp-recipe.html">
-                <img src="img/test-imgs/smørgrøt" alt="butter porridge">
-                <h3>butter porridge</h3>
-                <span><img src="img/icons/time.svg" alt="time">30 min</span>
-            </a>
-            <a class="card post-card" data-style="large" href="temp-aricle.html">
-                <img src="img/test-imgs/knive" alt="knive cutting">
-                <h2>knive use</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, doloremque labore necessitatibus quaerat sit temporibus totam velit. Amet at consequatur delectus doloremque ducimus error ex fugiat, illo nulla, officia tempora!</p>
-            </a>
-            <a class="card post-card" href="temp-aricle.html">
-                <img src="img/test-imgs/knive" alt="knive cutting">
-                <h2>knive use</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, doloremque labore necessitatibus quaerat sit temporibus totam velit. Amet at consequatur delectus doloremque ducimus error ex fugiat, illo nulla, officia tempora!</p>
-            </a>
-            <a class="card" href="temp-recipe.html">
-                <img src="img/test-imgs/smørgrøt" alt="butter porridge">
-                <h3>butter porridge</h3>
-                <span><img src="img/icons/time.svg" alt="time">30 min</span>
-            </a>
-            <a class="card post-card" href="temp-aricle.html">
-                <img src="img/test-imgs/knive" alt="knive cutting">
-                <h2>knive use</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, doloremque labore necessitatibus quaerat sit temporibus totam velit. Amet at consequatur delectus doloremque ducimus error ex fugiat, illo nulla, officia tempora!</p>
-            </a>
-            <a class="card" data-style="large" href="temp-recipe.html">
-                <img src="img/test-imgs/smørgrøt" alt="butter porridge">
-                <h3>butter porridge</h3>
-                <span><img src="img/icons/time.svg" alt="time">30 min</span>
-            </a>
-            <a class="card post-card" href="temp-aricle.html">
-                <img src="img/test-imgs/knive" alt="knive cutting">
-                <h2>knive use</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, doloremque labore necessitatibus quaerat sit temporibus totam velit. Amet at consequatur delectus doloremque ducimus error ex fugiat, illo nulla, officia tempora!</p>
-            </a>
-            <a class="card" href="temp-recipe.html">
-                <img src="img/test-imgs/smørgrøt" alt="butter porridge">
-                <h3>butter porridge</h3>
-                <span><img src="img/icons/time.svg" alt="time">30 min</span>
-            </a>
-            <a class="card" href="temp-recipe.html">
-                <img src="img/test-imgs/smørgrøt" alt="butter porridge">
-                <h3>butter porridge</h3>
-                <span><img src="img/icons/time.svg" alt="time">30 min</span>
-            </a>
-            <a class="card post-card" data-style="wide" href="temp-aricle.html">
-                <img src="img/test-imgs/knive" alt="knive cutting">
-                <h2>knive use</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, doloremque labore necessitatibus quaerat sit temporibus totam velit. Amet at consequatur delectus doloremque ducimus error ex fugiat, illo nulla, officia tempora!</p>
-            </a>
-        </div>
+        <fieldset aria-label="filter tags"></fieldset>
+        <div></div>
+        <button class="pillshape" id="more_articles_btn" data-recipe-to-show="0">more articles</button>
     </section>
 </main>
 <footer>
-    <!--<nav>
-        <a aria-current="page" href="index.html">Home</a>
-        <a href="articles.html">Articles</a>
-        <a href="contact.html">Contact</a>
-    </nav>-->
     <ul aria-label="sosial media liks" class="sosial-links">
         <li>
             <a href="https://www.facebook.com">
