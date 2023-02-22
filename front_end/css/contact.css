@@ -65,6 +65,13 @@ div[aria-label="contact form"] > form > textarea {
     padding: .25rem;
 }
 
+div[aria-label="contact form"] > form > :is(input, label, textarea).form-error {
+    border-color: red;
+    color: red;
+}
+
+
+
 div[aria-label="contact form"] > form > :where(textarea, input):where(:hover, :focus, :focus-visible) {
     border-color: var(--alt-blue);
 }
