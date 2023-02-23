@@ -26,7 +26,7 @@ export const changeHidden = (elements) => {
 
 changeHidden([...carousel_cards.children]);
 window.addEventListener("resize", () => {
-
+  changeHidden([...carousel_cards.children]);
 });
 
 const move_items = (list, dir, amount) => {
