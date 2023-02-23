@@ -1,4 +1,5 @@
 @import "root-vars.css";
+@import "carousel.css";
 
 * {
     margin: 0;
@@ -100,52 +101,6 @@ div:has(h1) {
 
 h1 {
     font-size: 3rem;
-}
-
-section[aria-label="carousel"] {
-    display: grid;
-    grid-template-rows: min-content var(--card-size);
-    grid-template-columns: min-content repeat(4, var(--card-size)) min-content;
-    column-gap: var(--card-grid-gap);
-    row-gap: var(--page-gap);
-}
-
-section[aria-label="carousel"] > h2 {
-    grid-column: span 6;
-    justify-self: center;
-    font-size: 2rem;
-}
-
-section[aria-label="carousel"] > button {
-    align-self: center;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    background: unset;
-    border: .25rem solid black;
-    border-radius: 50%;
-    padding: 1rem;
-}
-
-section[aria-label="carousel"] > button:where(:hover, :focus) {
-    background-color: var(--alt-blue);
-}
-
-section[aria-label="carousel"] > button > img {
-    height: 2.6rem;
-    width: auto;
-}
-
-section[aria-label="carousel"] > button > img > svg > g > path {
-    fill: #ffffff;
-}
-
-section[aria-label="carousel contents"] {
-    grid-column: span 4;
-    display: grid;
-    grid-template-columns: subgrid;
-    grid-auto-flow: column;
-    gap: inherit;
 }
 
 .flipp {
@@ -292,16 +247,6 @@ footer > * {
  }
 
 @media only screen and (max-width: 1200px) {
-    section[aria-label="carousel"] {
-        grid-template-columns: min-content repeat(3, var(--card-size)) min-content;
-    }
-
-    section[aria-label="carousel contents"] {
-        display: grid;
-        grid-column: 2/ span 3;
-        grid-template-columns: repeat(3, var(--card-size));
-    }
-
     .articles > div {
         grid-template-columns: repeat(3, var(--card-size));
         grid-auto-flow: dense;
@@ -316,38 +261,6 @@ footer > * {
     .articles > div {
         grid-template-columns: repeat(3, var(--card-size));
         grid-auto-flow: dense;
-    }
-}
-
-@media only screen and (max-width: 900px) {
-    section[aria-label="carousel"] > button {
-        display: none;
-    }
-
-    section[aria-label="carousel"] {
-        position: relative;
-        left: 0;
-        right: 0;
-        grid-template-columns: auto;
-        grid-template-rows: min-content var(--card-size);
-    }
-
-    section[aria-label="carousel contents"] {
-        max-width: 100vw;
-        overflow-x: scroll;
-        padding-inline: .5rem;
-        grid-column: span 6;
-        grid-template-columns: repeat(auto, var(--card-size));
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-    }
-
-    section[aria-label="carousel contents"] > .card {
-        width: var(--card-size);
-    }
-
-    :where(section[aria-label="carousel contents"], fieldset[aria-label="filter tags"])::-webkit-scrollbar {
-        display: none;
     }
 }
 

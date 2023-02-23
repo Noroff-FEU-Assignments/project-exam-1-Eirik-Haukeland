@@ -34,8 +34,8 @@ section[aria-label="carousel"] > button > img {
     width: auto;
 }
 
-section[aria-label="carousel"] > button > img > svg > g > path {
-    fill: #ffffff;
+section[aria-label="carousel"] > button:where(:hover, :focus) > img{
+    filter: invert(100%);
 }
 
 section[aria-label="carousel contents"] {
