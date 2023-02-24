@@ -129,8 +129,8 @@ nav {
 }
 
 #site_search > button > img{
-    /*height: var(--site-search-height);*/
-    /*width: auto;*/
+    height: var(--site-search-height);
+    width: auto;
     filter: invert(100%);
 }
 
