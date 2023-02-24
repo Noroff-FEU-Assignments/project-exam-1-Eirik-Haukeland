@@ -45,7 +45,20 @@ fetch("https://examapi.ebh.fyi/wp-json/wp/v2/wprm_recipe?per_page=100")
       filterSerch(evt.target.value, response, articles_section)
     })
 
-    recipeSearch.value = query.split("=")[1];
-    filterSerch(query.split("=")[1], response, articles_section);
+
+    const queryarray = query.slice(1).split("&")
+
+    queryarray.forEach(q => {
+      const searchKey = q.split("=")[0]
+      const searchTerm = q.split("=")[1];
+
+      if (searchKey === "search" && typeof searchTerm === "string") {
+        recipeSearch.value = searchTerm;
+        filterSerch(searchTerm, response, articles_section);
+      } else {
+        console.error(`ERROR: query "${searchKey}=${searchTerm}" not recongised`)
+      }
+    })
+
   })
 
