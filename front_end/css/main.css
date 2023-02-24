@@ -59,13 +59,10 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Roboto Slab', serif;
 }
 
-main > div:first-child {
+main > div > h1:first-child {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-div > h1 {
     line-height: initial;
 }
 
@@ -90,14 +87,51 @@ nav {
     font-size: 1.5rem;
 }
 
-#menu-div > form > button {
-    height: min-content;
-    width: min-content;
+#menu-div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
-#menu-div > form > button > img{
-    max-height: 1rem;
-    width: auto;
+#site_search {
+    position: relative;
+    display: flex;
+    gap: 0;
+    height: calc(var(--site-search-height) * 1.75);
+    border: white solid;
+    border-radius: .5rem;
+}
+
+#site_search > input {
+    flex-grow: 1;
+    height: 100%;
+    border: none;
+}
+
+#site_search > button {
+    height: 100%;
+    width: min-content;
+    background-color: var(--main-blue);
+    border: none;
+    border-left: white solid;
+    border-radius: 0 .5rem .5rem 0;
+    line-height: 0;
+    padding: .2rem;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+#site_search > button:where(:hover, :focus-within) {
+    background-color: var(--alt-blue);
+
+}
+
+#site_search > button > img{
+    /*height: var(--site-search-height);*/
+    /*width: auto;*/
+    filter: invert(100%);
 }
 
 nav a {
@@ -361,10 +395,6 @@ footer > * {
         width: min-content;
         height: min-content;
         background-color: var(--alt-blue);
-    }
-
-    #menu-div > form {
-        display: flex;
     }
 
     #menu-div > nav {
