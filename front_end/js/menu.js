@@ -33,5 +33,5 @@ window.addEventListener("resize", () => {
 siteSearch.addEventListener("submit", (evt) => {
   evt.preventDefault()
   const searchField = siteSearch.querySelector("#search-field")
-  // location.assign(`${new URL(window.location.origin)}articles.html?search=${searchField.value}`);
+  location.assign(`${new URL(window.location.origin)}articles.html?search=${searchField.value}`);
 })
