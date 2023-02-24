@@ -94,7 +94,8 @@ img {
     object-fit: cover;
 }
 
-#steps-list > img.zoom {
+#steps-list li > img.zoom ,
+#how_to li > img.zoom {
     z-index: 1;
     position: fixed;
     left: var(--zoom-img-left);
@@ -103,14 +104,6 @@ img {
     height: auto;
     max-height: 70vh;
     object-fit: cover;
-}
-
-img.zoom:after {
-    content: "";
-    position: center;
-    width: calc(50rem + 1rem);
-    height: calc(50rem + 1rem);
-    background-color: hsla(var(--main-blue), 20%);
 }
 
 @media only screen and (max-width: 900px) {
@@ -157,8 +150,9 @@ img.zoom:after {
 }
 
 @media only screen and (max-width: 650px) {
-    img.zoom {
-        width: 80vw;
+    #steps-list li > img.zoom ,
+    #how_to li > img.zoom {
+        width: 100%;
     }
 
     #ingredients-list,
