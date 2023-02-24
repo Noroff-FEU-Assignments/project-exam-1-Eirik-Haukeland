@@ -2,7 +2,6 @@ import makeCard from "./makeCard.js";
 
 export default (list, appendLocation, button) => {
 
-
   let lastUsedcard = Number(button.getAttribute("data-recipe-to-show"));
   let workingCards = list.slice(lastUsedcard, lastUsedcard + 9);
 

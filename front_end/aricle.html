@@ -14,6 +14,9 @@
   </script>
   <script defer type="module" src="js/menu.js"></script>
   <script defer type="module" src="js/carousel.js"></script>
+  <script defer type="module" src="js/article.js"></script>
+  <link rel="stylesheet" href="css/one-article.css">
+  <link rel="stylesheet" href="css/main.css">
   <meta charset="UTF-8">
   <meta name="description" content="get from article">
   <title>heb's recipes | article title</title>
@@ -25,32 +28,45 @@
     <button><img src="img/icons/men-colsed.svg" alt="menu-icon open"></button>
     <div id="menu-div">
       <form role="search">
+        <label class="visually-hidden" for="search-field">search for recipe</label>
         <input type="text" name="search-field" id="search-field" placeholder="search">
         <button type="submit"><img src="img/icons/search.svg" alt="search"></button>
       </form>
       <nav>
-        <a aria-current="page" href="index.html">Home</a>
+        <a href="index.html">Home</a>
         <a href="articles.html">Articles</a>
         <a href="contact.html">Contact</a>
       </nav>
     </div>
   </div>
 </header>
-<main>
+<main class="loading">
   <h1>article title</h1>
   <article></article>
   <section aria-label="carousel">
-    <h2>similar</h2>
-    <button aria-label="carousel next"><img src="img/icons/carousel-arrow" alt="next"></button>
-    <button aria-label="carousel previus"><img src="img/icons/carousel-arrow" class="flipp" alt="pervius"></button>
-    <section aria-label="carousel contents"></section>
+    <h2>popular recipes</h2>
+    <button id="carousel_previus_btn" aria-label="carousel previus sett"><img src="img/icons/carousel-arrow.svg" class="flipp" alt="previus"></button>
+    <section id="carousel_content" aria-label="carousel contents"></section>
+    <button id="carousel_next_btn" aria-label="carousel next sett"><img src="img/icons/carousel-arrow.svg" alt="next"></button>
   </section>
 </main>
 <footer>
-  <ul>
-    <li><a href="facebook.com"><img src="img/icons/facebook.icon" alt="facebook icon"></a></li>
-    <li><a href="twitter.com"><img src="img/icons/tvitter.icon" alt="twitter icon"></a></li>
-    <li><a href="instagram.com"><img src="img/icons/instagram/shot.jpg" alt="instagram icon"></a></li>
+  <ul aria-label="sosial media liks" class="sosial-links">
+    <li>
+      <a href="https://www.facebook.com">
+        <img src="img/icons/f_logo_RGB-White.svg" alt="go to facebook">
+      </a>
+    </li>
+    <li>
+      <a href="https://www.twitter.com">
+        <img src="img/icons/Twitter_icon/Twitter logo/SVG/Logo white.svg" alt="go to twitter">
+      </a>
+    </li>
+    <li>
+      <a href="https://www.instagram.com">
+        <img src="img/icons/instagram/Instagram Logo Pack/02 White Glyph/Instagram_Glyph_White.svg" alt="go to instagram">
+      </a>
+    </li>
   </ul>
   <span>&#169; 2023 Heb's recipes</span>
 </footer>

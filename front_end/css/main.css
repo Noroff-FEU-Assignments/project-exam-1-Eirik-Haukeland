@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
 @import "root-vars.css";
 @import "carousel.css";
 
@@ -5,6 +6,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.25rem;
 }
 
 html {
@@ -15,11 +18,55 @@ body {
     height: 100vh;
     height: 100svh;
     display: grid;
-    grid-template-rows: min-content auto min-content;
+    grid-template-rows: min-content 1fr min-content;
+}
+
+.loading {
+    background-color: white;
+    position: relative;
+}
+
+.loading  * {
+    z-index: -1;
+    display: none;
+}
+
+.loading:after {
+    content: "";
+    width: 10rem;
+    height: 10rem;
+    position: absolute;
+    top: 4rem;
+    left: calc(50vw - ((10rem + 2rem) / 2));
+    background-color: unset;
+    border: 2rem solid var(--ligth-blue);
+    border-top-color: var(--alt-blue);
+    border-radius: 50%;
+    animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(365deg);
+    }
 }
 
 :where(header, card, footer) :where(a, a:visited, li, p, span, h2, h3, h4, h5, h6) {
     color: var(--text-dark-bg);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto Slab', serif;
+}
+
+main > div:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div > h1 {
+    line-height: initial;
 }
 
 header {
@@ -134,17 +181,21 @@ fieldset[aria-label="filter tags"] {
 #more_articles_btn {
     max-width: min-content !important;
     margin: .25rem;
-    background-color: white;
+    background-color: var(--ligth-blue);
     white-space: nowrap;
 }
 
 .tag.checked,
-:where(.tag, #more_articles_btn):where(:hover, :focus, :focus-visible) {
-    background-color: var(--alt-blue) !important;
+:is(.tag, #more_articles_btn):where(:hover, :focus, :focus-visible) {
+    background-color: var(--alt-blue);
     color: var(--text-dark-bg);
 }
 
-
+.tag[disabled="true"]:where(:hover, :focus),
+.tag[disabled="true"] {
+    background-color: hsl(0, 0%, 25%);
+    color: var(--text-dark-bg);
+}
 
 .articles > div {
     display: grid;
@@ -209,6 +260,14 @@ fieldset[aria-label="filter tags"] {
     padding-inline: 1rem;
 }
 
+.card.error {
+    background-color: brown;
+}
+
+.card.error > h3 {
+    text-align: center;
+}
+
 .post-card[data-style="large"] > p{
     -webkit-line-clamp: 4;
 }
@@ -251,10 +310,6 @@ footer > * {
         grid-template-columns: repeat(3, var(--card-size));
         grid-auto-flow: dense;
     }
-
-    /*.card[data-style="large"]:nth-of-type(odd) {*/
-    /*    grid-column: 3 / span 2;*/
-    /*}*/
 }
 
 @media only screen and (max-width: 1000px) {
@@ -265,10 +320,6 @@ footer > * {
 }
 
 @media only screen and (max-width: 700px) {
-/*    body{
-        font-size: var(--font-size);
-    }*/
-
     header {
         padding-inline: 1rem;
         position: relative;
@@ -332,15 +383,21 @@ footer > * {
         grid-auto-flow: dense;
     }
 
+
+}
+
+@media only screen and (max-width: 550px) {
     fieldset[aria-label="filter tags"] {
-        height: 7rem;
+        overflow-x: scroll;
         width: 100%;
-        background-color: var(--ligth-blue);
         display: flex;
+        height: 6.5rem;
         flex-flow: column;
         flex-wrap: wrap;
         justify-content: center;
-        overflow-x: scroll;
+    }
+    fieldset[aria-label="filter tags"] > * {
+        flex-shrink: 2;
     }
 }
 

@@ -80,7 +80,7 @@ export default (list, appendLocation, cardappendLocation, cardMoreBtn) => {
         }
       })
     })
-//     cardMoreBtn.addEventListener("click", () => addArticles(response, cardappendLocation, cardMoreBtn));
+    cardMoreBtn.addEventListener("click", () => addArticles(response, cardappendLocation, cardMoreBtn));
 
     appendLocation.appendChild(label)
   })

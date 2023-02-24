@@ -50,7 +50,6 @@ emailField.addEventListener("focusout", () => {
 })
 
 emailField.addEventListener("keyup", () => {
-  console.log(`${emailField.value} - is valid email: ${emailTest.test(emailField.value)}`);
   if (emailLabel.classList.contains("form-error") && emailTest.test(emailField.value)) {
     emailLabel.classList.remove("form-error");
     emailField.classList.remove("form-error");
@@ -105,7 +104,9 @@ messageField.addEventListener("keyup", () => {
   }
 })
 
-submitBtn.addEventListener("click", () => {
+submitBtn.addEventListener("click", (e) => {
+  e.preventDefault()
+
   if (!(textField.value.length > 5)) {
     textLabel.classList.add("form-error");
     textField.classList.add("form-error");
