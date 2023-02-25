@@ -42,6 +42,7 @@ img {
 #ingredients-list > #open_or_close:where(:hover, :focus-visible) {
     background-color: var(--ligth-blue);
     color: var(--text-ligth-bg);
+    cursor: pointer;
 }
 
 #ingredients-list > ul {
@@ -82,7 +83,7 @@ img {
 
 #steps-list li > p,
 #how_to li > p {
-    font-family: Roboto;
+    font-family: "Roboto", sans-serif;
     grid-column: span 2;
     padding-block: 1rem;
 }

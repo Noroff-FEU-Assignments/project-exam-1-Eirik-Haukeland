@@ -28,6 +28,7 @@ section[aria-label="carousel"] > button {
 
 section[aria-label="carousel"] > button:where(:hover, :focus) {
     background-color: var(--alt-blue);
+    cursor: pointer;
 }
 
 section[aria-label="carousel"] > button > img {

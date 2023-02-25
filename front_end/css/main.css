@@ -222,6 +222,7 @@ fieldset[aria-label="filter tags"] {
 :is(.tag, #more_articles_btn):where(:hover, :focus, :focus-visible) {
     background-color: var(--alt-blue);
     color: var(--text-dark-bg);
+    cursor: pointer;
 }
 
 .articles > div {
@@ -246,6 +247,7 @@ fieldset[aria-label="filter tags"] {
 
 .card:where(:hover, :focus) {
     background-color: var(--alt-blue);
+    cursor: pointer;
 }
 
 .card > :where(h2, h3, h4) {
