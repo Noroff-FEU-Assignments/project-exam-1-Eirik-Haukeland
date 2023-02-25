@@ -28,7 +28,7 @@ recipeArray.forEach(recipe => {
   if (recipe.id != query.split("=")[1]) {
     carousel_cards.appendChild(makeCard(recipe));
   } else {
-    title.innerText = `heb's recipes | ${recipe.title.rendered}`;
+    title.innerText = `Heb's recipes | ${recipe.title.rendered}`;
     h1.innerText = recipe.title.rendered;
     let apendLocation;
 
@@ -37,12 +37,12 @@ recipeArray.forEach(recipe => {
 
       article.innerHTML = `<section aria-labelledby="ingredients-id" id="ingredients-list">
                               <button id="open_or_close" class="pillshape">
-                                <h2 id="ingredients-id">ingredients</h2>
+                                <h2 id="ingredients-id">Ingredients</h2>
                               </button>
-                              <ul id="hide_me" hidden="true"></ul>
+                              <ul id="hide_me" hidden="hidden"></ul>
                             </section>
                             <section aria-labelledby="steps-id" id="steps-list">
-                              <h2 id="steps-id">steps</h2>
+                              <h2 id="steps-id">Steps</h2>
                               <ol></ol>
                             </section>`
 
@@ -68,7 +68,7 @@ recipeArray.forEach(recipe => {
         ingredients.innerHTML += `<li><span>${ingredient.amount} ${ingredient.unit}</span><span>${ingredient.name}${notes}</span></li>`
       })
 
-      ingredentsBtn.addEventListener("click", (e) => {
+      ingredentsBtn.addEventListener("click", () => {
         ingredients.toggleAttribute("hidden");
         if (!ingredients.hasAttribute("hidden")) {
           setTimeout(() => fixFistClumnIngredites(), 100)
