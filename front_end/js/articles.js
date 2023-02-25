@@ -15,7 +15,7 @@ const filterSerch = (searchVaule, response, placement) => {
   })
   placement.innerHTML = "";
   if (meetsSearchValue.length <= 9) {
-    moreArticlesBtn.setAttribute("data-recipe-to-show", 0);
+    moreArticlesBtn.setAttribute("data-recipe-to-show", "0");
     moreArticlesBtn.hidden = true;
   }
 
