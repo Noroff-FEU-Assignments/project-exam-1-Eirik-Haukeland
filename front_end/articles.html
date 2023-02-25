@@ -16,6 +16,7 @@
   <script defer type="module" src="js/menu.js"></script>
   <link rel="stylesheet" href="css/main.css">
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Here you whil find delicius recipes and usefull articles on cooking and related subjects">
   <title>heb's recipes | articles</title>
 </head>
@@ -41,12 +42,14 @@
 <main class="loading">
   <div>
     <h1>Articles</h1>
+    <h2 class="visually-hidden">Recipe search</h2>
     <form role="search">
-      <label for="recipe-search" class="visually-hidden"></label>
+      <label for="recipe-search" class="visually-hidden">search for post or recipe</label>
       <input type="text" name="recipe-search" id="recipe-search" class="pillshape" placeholder="search for post or recipe">
     </form>
   </div>
   <section class="articles">
+    <h2 class="visually-hidden">List of articles</h2>
     <fieldset aria-label="filter tags"></fieldset>
     <div></div>
     <button class="pillshape" id="more_articles_btn" data-recipe-to-show="0">more articles</button>
