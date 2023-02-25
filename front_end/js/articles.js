@@ -9,7 +9,7 @@ const query = document.location.search;
 const filterSerch = (searchVaule, response, placement) => {
   const meetsSearchValue = [];
   response.forEach(element => {
-    if (element.recipe.name.includes(searchVaule)) {
+    if (element.recipe.name.toLowerCase().includes(searchVaule.toLowerCase())) {
       meetsSearchValue.push(element)
     }
   })
@@ -44,8 +44,6 @@ fetch("https://examapi.ebh.fyi/wp-json/wp/v2/wprm_recipe?per_page=100")
       evt.preventDefault()
       filterSerch(evt.target.value, response, articles_section)
     })
-
-
 
     const queryarray = query.slice(1).split("&")
 
