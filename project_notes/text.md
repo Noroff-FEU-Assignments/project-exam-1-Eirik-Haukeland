@@ -2,10 +2,10 @@
 
 ## Home page
 - [x] About page
-- [] List of blog posts
-- [] Blog post specific pages
+- [x] List of blog posts
+- [x] Blog post specific pages
 - [x] Contact page.
-- [] Home Page
+- [x] Home Page
 
 The home page should have a ‘Latest Posts’ section which uses a carousel (slider) for users to click to view more
 posts. For example, by default the user can see four posts, then they can click an arrow on the right to view the next
@@ -53,25 +53,25 @@ Note that this is an exam, and therefore tutor support will be limited as per th
 ### Level 1 Process
 - [x] Decide on the theme for the blog you’re going to make
 - [x] Create a prototype of the website
-- [] Install WordPress on your web host and add the blogs on the admin panel.
 - [x] Use the GitHub repo created by GitHub Classroom for your files and deploy to Netlify
-- [] Build your website using HTML, CSS and JavaScript making a call to the WordPress REST API to fetch your data.
+- [x] Build your website using HTML, CSS and JavaScript making a call to the WordPress REST API to fetch your data.
 - [x] Install Hotjar on your website.
+- [] Install WordPress on your web host and add the blogs on the admin panel.
 - [] Ask users to test your website, and adjust based on their feedback and any insights from Hotjar.
 - [] Write a report documenting your project (template provided in this repository).
 - [] Submit your report as a PDF and a link to both your Netlify deployment and your GitHub repo.
 
 ### Level 2 Process (optional)
-- [] You can try adding a sort, filter, or search to the blog posts page allowing users to find the blog post more easily that they’re looking for.
+- [x] You can try adding a sort, filter, or search to the blog posts page allowing users to find the blog post more easily that they’re looking for.
 - [] Post the data from the contact form to WordPress so you have the details saved.
 - [] Allow users to submit comments on a blog post, and post this data to WordPress
 
 ## Checklist
 - [x] Mobile responsive and looks good on all screen sizes (not just one mobile screen and one desktop screen). Meta viewport in the head of the document.
+- [x] Each page has a unique title, one unique h1, and meta description.
+- [x] Images are below 200kb and have alt text.
+- [x] The site looks good and there's a class in the navigation telling the user which page they're on
+- [x] Text lines are kept short. Here's an example of how you can do that using max-width https://codepen.io/noroff-education/pen/VwYpweQ
+- [x] The colours have good contrast, the text is easy to read and the site is easy for user's to navigate.
 - [] The HTML is neat and semantic, and the CSS is concise and styles aren't duplicated in media queries.
-- [] Each page has a unique title, one unique h1, and meta description.
-- [] Images are below 200kb and have alt text.
-- [] The site looks good and there's a class in the navigation telling the user which page they're on
-- [] Text lines are kept short. Here's an example of how you can do that using max-width https://codepen.io/noroff-education/pen/VwYpweQ
-- [] The colours have good contrast, the text is easy to read and the site is easy for user's to navigate.
 - [] The report includes planning, and covers why decisions were made and how the process was to create site.
