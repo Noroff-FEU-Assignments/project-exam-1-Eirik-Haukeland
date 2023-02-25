@@ -1,35 +1,73 @@
 import addArticles from "./addArticles.js";
 
 const makeTagList = (list) => {
-  let tagList = []
-
-  list.forEach(e => {
-    let keywords = [];
-    if (e.recipe) {
-      keywords = [...e.recipe.tags.keyword];
-    } else {
-      const data = e.getAttribute("data-tags");
-      [...data.split(",")].forEach(t => {
-        const obj = {term_id: t}
-        keywords.push(obj)
-      })
-    }
-    keywords.forEach(tag => {
-      let addTag = true;
-
-      tagList.forEach(tItem => {
-        if (tItem.term_id === tag.term_id) {
-          addTag = false;
+  const tagList = [];
+  const hasBeenAdded = [];
+  list.forEach(item => {
+      const itemTags = item.recipe.tags.keyword;
+      itemTags.forEach(tag => {
+        if (!hasBeenAdded.includes(tag.term_id)) {
+          tagList.push(tag)
+          hasBeenAdded.push(tag.term_id)
         }
       })
+  })
+  return tagList;
+}
 
-      if (addTag) {
-        tagList.push(tag)
-      }
-    })
+const tagFitering = (target, list, cardappendLocation, cardMoreBtn) => {
+  target.classList.toggle("checked")
+  target.lastChild.toggleAttribute("checked");
+
+  const allSibligs = [...target.parentNode.children];
+  const allCheckedTags = [];
+
+  allSibligs.forEach(tag => {
+    if (tag.classList.contains("checked")) {
+      allCheckedTags.push(tag.lastChild.value);
+    }
   })
 
-  return tagList
+  const recipeList = [];
+
+  list.forEach(recipe => {
+    const recipeTagList = [];
+    recipe.recipe.tags.keyword.forEach(recipeTag => {
+      recipeTagList.push(recipeTag.term_id)
+    })
+
+    let hasAllTags = true;
+    allCheckedTags.forEach(checked => {
+      if (!recipeTagList.includes(parseInt(checked, 10))) {
+        hasAllTags = false
+      }
+    })
+
+    if (hasAllTags) {
+      recipeList.push(recipe);
+    }
+  })
+
+  console.log(recipeList);
+
+  cardMoreBtn.setAttribute("data-recipe-to-show", 0);
+  cardappendLocation.innerHTML = "";
+  addArticles(recipeList, cardappendLocation, cardMoreBtn);
+  cardMoreBtn.addEventListener("click", () => addArticles(recipeList, cardappendLocation, cardMoreBtn));
+
+  const availableTagObjects = makeTagList([...recipeList]);
+  const availableTags = [];
+  availableTagObjects.forEach(obj => {
+    availableTags.push(obj.term_id);
+  })
+
+  allSibligs.forEach(sibling => {
+    if (!availableTags.includes(parseInt(sibling.lastChild.value, 10))) {
+      sibling.setAttribute("hidden", true)
+    } else {
+      sibling.removeAttribute("hidden")
+    }
+  })
 }
 
 export default (list, appendLocation, cardappendLocation, cardMoreBtn) => {
@@ -47,40 +85,7 @@ export default (list, appendLocation, cardappendLocation, cardMoreBtn) => {
 
     label.appendChild(checkBox);
 
-    label.addEventListener("mousedown", (evt) => {
-      const checkbox = evt.target.lastChild;
-      const label = evt.target;
-      const parrent = evt.target.parentNode;
-      label.classList.toggle("checked")
-
-      console.log(label.classList);
-
-      const hasTag = [];
-      list.forEach(item => {
-        if (item.wprm_keyword.includes(Number(checkbox.value))) {
-          hasTag.push(item);
-        }
-      })
-
-      cardMoreBtn.setAttribute("data-recipe-to-show", 0);
-      cardappendLocation.innerHTML = "";
-      addArticles(hasTag, cardappendLocation, cardMoreBtn);
-
-      const theNewList = makeTagList([...cardappendLocation.children]);
-
-      [...parrent.children].forEach(siblig => {
-        let hideThisTag = true;
-        [...theNewList].forEach(t => {
-          if (siblig.lastChild.value === t.term_id) {
-            hideThisTag = false
-          }
-        })
-        if (hideThisTag) {
-          siblig.hidden = true;
-        }
-      })
-    })
-    cardMoreBtn.addEventListener("click", () => addArticles(response, cardappendLocation, cardMoreBtn));
+    label.addEventListener("mousedown", (evt) => tagFitering(evt.target, list,  cardappendLocation, cardMoreBtn));
 
     appendLocation.appendChild(label)
   })
