@@ -46,6 +46,7 @@ fetch("https://examapi.ebh.fyi/wp-json/wp/v2/wprm_recipe?per_page=100")
     })
 
 
+
     const queryarray = query.slice(1).split("&")
 
     queryarray.forEach(q => {
@@ -55,7 +56,7 @@ fetch("https://examapi.ebh.fyi/wp-json/wp/v2/wprm_recipe?per_page=100")
       if (searchKey === "search" && typeof searchTerm === "string") {
         recipeSearch.value = searchTerm;
         filterSerch(searchTerm, response, articles_section);
-      } else {
+      } else if (searchKey || !searchTerm === undefined) {
         console.error(`ERROR: query "${searchKey}=${searchTerm}" not recongised`)
       }
     })
