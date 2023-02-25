@@ -125,7 +125,6 @@ nav {
 
 #site_search > button:where(:hover, :focus-within) {
     background-color: var(--alt-blue);
-
 }
 
 #site_search > button > img{
@@ -222,12 +221,6 @@ fieldset[aria-label="filter tags"] {
 .tag.checked,
 :is(.tag, #more_articles_btn):where(:hover, :focus, :focus-visible) {
     background-color: var(--alt-blue);
-    color: var(--text-dark-bg);
-}
-
-.tag[disabled="true"]:where(:hover, :focus),
-.tag[disabled="true"] {
-    background-color: hsl(0, 0%, 25%);
     color: var(--text-dark-bg);
 }
 
