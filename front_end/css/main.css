@@ -260,6 +260,8 @@ fieldset[aria-label="filter tags"] {
     color: #ffffff;
 }
 
+
+
 .card > img{
     object-fit: cover;
     overflow: hidden;
@@ -267,8 +269,12 @@ fieldset[aria-label="filter tags"] {
     height: 100%;
 }
 
+.card > span {
+    display: flex;
+    gap: .5rem;
+}
+
 .card > span > img[alt="time"] {
-    height: auto;
     width: 1.15rem;
 }
 
