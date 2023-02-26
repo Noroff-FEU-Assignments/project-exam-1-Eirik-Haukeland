@@ -252,6 +252,7 @@ fieldset[aria-label="filter tags"] {
 
 .card > :where(h2, h3, h4) {
     padding-top: .5rem;
+    text-align: center;
 }
 
 .card > :not(img) {
@@ -259,8 +260,6 @@ fieldset[aria-label="filter tags"] {
     justify-self: center;
     color: #ffffff;
 }
-
-
 
 .card > img{
     object-fit: cover;
@@ -297,10 +296,6 @@ fieldset[aria-label="filter tags"] {
 
 .card.error {
     background-color: brown;
-}
-
-.card.error > h3 {
-    text-align: center;
 }
 
 .post-card[data-style="large"] > p{
@@ -430,6 +425,10 @@ footer > * {
     fieldset[aria-label="filter tags"] > * {
         flex-shrink: 2;
     }
+}
+
+card :where(h2, h3, h4) {
+    padding-inline: .5rem;
 }
 
 *[hidden] {
