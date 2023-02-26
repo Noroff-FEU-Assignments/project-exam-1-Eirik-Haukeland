@@ -1,7 +1,6 @@
 export default (recipeInfo) => {
   const card = document.createElement("a");
   let time = 5
-  console.log(recipeInfo.recipe.total_time)
   if (parseInt(recipeInfo.recipe.total_time, 10) > 5) {
     time = recipeInfo.recipe.total_time;
   }
