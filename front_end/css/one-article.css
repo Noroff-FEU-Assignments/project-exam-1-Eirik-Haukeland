@@ -7,6 +7,11 @@ article {
     gap: var(--card-grid-gap);
 }
 
+h1 {
+    line-height: 1.125;
+    text-align: center;
+}
+
 img {
     width: 14rem;
     height: max(100%, 7rem);
@@ -154,11 +159,6 @@ img {
     #steps-list li > img.zoom ,
     #how_to li > img.zoom {
         width: 100%;
-    }
-
-    #ingredients-list,
-    #ingredients-list > #open_or_close {
-        border-radius: unset;
     }
 
     #ingredients-list > #open_or_close {
