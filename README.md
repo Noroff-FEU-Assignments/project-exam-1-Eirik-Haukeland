@@ -1,69 +1,129 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/6cadece7-376e-4ed3-8df7-01112636b75b/deploy-status)](https://app.netlify.com/sites/joyful-halva-a4d44f/deploys)
 
-## Project Exam 1
+# [README: exam project 1](https://github.com/Noroff-FEU-Assignments/project-exam-1-Eirik-Haukeland)
+by [Eirik Berget Haukeland](https://github.com/Eirik-Haukeland)
 
-## Goal
+This is the code for the front end of my food blog
 
-To put into practice the skills learned over your first year of studies.
+## Built With
+- Html
+- Css
+- JavaScript
+- cms (WordPress)
 
-## Brief
-You have been tasked with creating a blog site. You can choose the design and topics covered on the blog, but it should have at least the following pages:
--	Home page
--	About page
--	List of blog posts
--	Blog post specific pages
--	Contact page.
+## get the code
 
-### Home Page
-The home page should have a ‘Latest Posts’ section which uses a carousel (slider) for users to click to view more posts. For example, by default the user can see four posts, then they can click an arrow on the right to view the next four posts, and click it again to view the next four posts. The user can also click back to view results they had previously seen. This must be implemented for desktop at least, but if you want a simpler layout for mobile, you can change it from being in a carousel.
+### with gh cli tool
+you need to download gh cli tool [look here for informatin](https://github.com/cli/cli#installation)
 
-### Blog Page
+Fork the repo:
+``` shell
+  $ gh repo fork git@github.com/Noroff-FEU-Assignments/project-exam-1-Eirik-Haukeland
+```
 
-The blog posts page should show the first 10 blogs, and the user should click to view more results which then show underneath the first 10 blogs.
+### with standard git cli
+you need to download git cli tool [look here for informatin](https://git-scm.com/downloads)
 
-### Blog Specific Page
+clone the repo:
+``` shell
+  $ git clone git@github.com/Noroff-FEU-Assignments/project-exam-1-Eirik-Haukeland
+```
 
-The content of the blog specific page should be dynamically built using a query string parameter based on whatever link the user clicked. The title of the blog specific page should change based on the blog that has been clicked on e.g. “My Blog | An Article I Wrote”.
+check the current remote:
+``` shell
+  $ git remote -v
+```
 
-If images on the blog post page are clicked, a modal should appear giving the user a bigger view of that image. Clicking outside the image should hide the modal.
+set the new remote:
+``` shell
+  $ git remote set-url origin http://newserver/myproject.git 
+```
 
-### Contact page
+verify that the remote has been sett properly:
+``` shell
+  $ git remote -v
+```
 
-Create a contact us page, there should be 4 textboxes on this page.
--	Name (Should be more than 5 characters long)
--	Email address (Must be a valid email address)
--	Subject (Should be more than 15 characters long)
--	Message content (Should be more than 25 characters long)
+push to new repo:
+```shell
+  $ git push origin master
+```
 
-Please use JavaScript for validation, show error messages if the values in the textboxes do not meet the requirements.
+## hosing the front end
+once you have the repo you whil need to sett up the web host:
 
-### WordPress
+you migth use [github pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site), 
+netlify [se here](https://docs.netlify.com/get-started/), or 
+sett your own web server.
 
-The content for your website will be stored on a WordPress installation used as a Headless CMS. It’s important to note that we are only using WordPress to provide an API and add content for the blog. You should not submit a link to a WordPress site, but build your website using HTML, CSS and JavaScript and making a call to the WordPress REST API to fetch the data. 
+be shure to set the front_end folder to the root folder
+of the web page
 
-The project has two aspects:
--	API from your WordPress installation
--	Your website built with HTML, CSS and JavaScript
+## setup cms whit docker
+I used WordPress with the "wp recipe maker" plugin
 
-You will need to add at least 12 blogs for your website. You can use lorem ipsum for paragraphs if you need, but headings, images etc. should all make sense.
+you whil need a sql database like [mariadb](https://hub.docker.com/_/mariadb) 
+or [mysql](https://hub.docker.com/_/mysql) then you whill 
+need to add sett up a [wordpress](https://hub.docker.com/_/wordpress)
 
-Note that this is an exam, and therefore tutor support will be limited as per the study plan.
+### set up the network for your container
+```shell
+  $ docker network create [name-of-network]
+```
 
-## Level 1 Process
+### set up the database (here we are using mariadb)
+```shell
+  $ mkdir [path/to/db]
 
-1.	Decide on the theme for the blog you’re going to make
-2.	Create a prototype of the website
-3.	Install WordPress on your web host and add the blogs on the admin panel. 
-4.	Use the GitHub repo created by GitHub Classroom for your files and deploy to Netlify
-5.	Build your website using HTML, CSS and JavaScript making a call to the WordPress REST API to fetch your data.
-6.	Install Hotjar on your website.
-7.	Ask users to test your website, and adjust based on their feedback and any insights from Hotjar.
-8.	Write a report documenting your project (template provided in this repository).
-9.	Submit your report as a PDF and a link to both your Netlify deployment and your GitHub repo.
- 
-## Level 2 Process (optional)
+  $ docker run \
+      --detach \
+      --network [name-of-network] \
+      -v [path/to/db]:/var/lib/mysql \
+      --name [name-db] \
+      --env MARIADB_DATABASE=[name-db] \
+      --env MARIADB_USER=[user-name] \
+      --env MARIADB_ROOT_PASSWORD='[root password]' \
+      --env MARIADB_PASSWORD='[personal password]' \
+      mariadb:latest
+```
 
-1.	You can try adding a sort, filter, or search to the blog posts page allowing users to find the blog post more easily that they’re looking for. 
-2.	Post the data from the contact form to WordPress so you have the details saved.
-3.	Allow users to submit comments on a blog post, and post this data to WordPress
+### set up the WordPress
+```shell
+  $ mkdir [path/to/wordpress]
+  
+  $ sudo docker run \
+      --network [name-of-network] \
+       -v [path/to/wordpress]/gh-wp:/var/www/html \
+      --name [wordpres-name] \
+      -p 8080:80 \
+      -p 443:443 \
+      -d wordpress
+```
 
+### worpress setup
+when setting up the database:
+- set database name to the value from MARIADB_DATABASE (from the db setup)
+- set username to the value from MARIADB_USER (from the db setup)
+- set password to the value from MARIADB_PASSWORD (from the db setup)
+- set database host to the value from name (from the db setup)
+
+### adding recipe plugin
+- go to plugins tab
+- click on "Add New"
+- search for "WP Recipe Maker"
+- click "install now" and then "activate"
+- afterwords you can go to the "wp recipe maker" tab
+- go through the setup and add recipes
+
+### change to code
+change the url's of the feach recuests on 
+[article.js](front_end/js/article.js) (obs. there are two 
+in this files), [articles.js](front_end/js/articles.js), 
+and [index.js](front_end/js/index.js)
+
+## License
+You are free to copy, modify, and distribute exam project 1
+with attribution under the terms of the Creative Commons 
+Attribution license. See the [Creative Commons Attribution
+4.0 International License](http://creativecommons.org/licenses/by/4.0/) file
+for details.
