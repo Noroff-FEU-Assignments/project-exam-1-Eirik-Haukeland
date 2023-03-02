@@ -52,8 +52,8 @@ push to new repo:
 ## hosing the front end
 once you have the repo you whil need to sett up the web host:
 
-you migth use [github pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site), 
-netlify [se here](https://docs.netlify.com/get-started/), or 
+you migth use [GitHub pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site), 
+Netlify [se here](https://docs.netlify.com/get-started/), or 
 sett your own web server.
 
 be shure to set the front_end folder to the root folder
@@ -64,7 +64,7 @@ I used WordPress with the "wp recipe maker" plugin
 
 you whil need a sql database like [mariadb](https://hub.docker.com/_/mariadb) 
 or [mysql](https://hub.docker.com/_/mysql) then you whill 
-need to add sett up a [wordpress](https://hub.docker.com/_/wordpress)
+need to add sett up a [WordPress](https://hub.docker.com/_/wordpress)
 
 ### set up the network for your container
 ```shell
@@ -118,7 +118,7 @@ when setting up the database:
 ### change to code
 change the url's of the feach recuests on 
 [article.js](front_end/js/article.js) (obs. there are two 
-in this files), [articles.js](front_end/js/articles.js), 
+in this file), [articles.js](front_end/js/articles.js), 
 and [index.js](front_end/js/index.js)
 
 ## License
