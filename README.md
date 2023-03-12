@@ -9,20 +9,20 @@ This is the code for the front end of my food blog
 - Html
 - Css
 - JavaScript
-- cms (WordPress)
+- CMS (WordPress)
 
 ## get the code
 
-### with gh cli tool
-You need to download gh cli tool [look here for informatin](https://github.com/cli/cli#installation)
+### With gh CLI tool
+You need to download gh CLI tool [look here for informatin](https://github.com/cli/cli#installation)
 
 Fork the repo:
 ``` shell
   $ gh repo fork git@github.com/Noroff-FEU-Assignments/project-exam-1-Eirik-Haukeland
 ```
 
-### With standard git cli
-You need to download git cli tool [look here for informatin](https://git-scm.com/downloads)
+### With standard git CLI
+You need to download git CLI tool [look here for informatin](https://git-scm.com/downloads)
 
 Clone the repo:
 ``` shell
@@ -49,7 +49,7 @@ Push to new repo:
   $ git push origin master
 ```
 
-## Hosing the front end
+## Hosting the front end
 Once you have the repo you whil need to sett up the web host:
 
 You migth use [GitHub pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site), 
@@ -59,12 +59,12 @@ sett your own web server.
 Be shure to set the front_end folder to the root folder
 of the web page
 
-## Setup cms whit docker
+## Setup cms with docker
 I used WordPress with the "wp recipe maker" plugin
 
-You whil need a sql database like [mariadb](https://hub.docker.com/_/mariadb) 
-or [mysql](https://hub.docker.com/_/mysql) then you whill 
-need to add sett up a [WordPress](https://hub.docker.com/_/wordpress)
+You will need a SQL database like [mariadb](https://hub.docker.com/_/mariadb) 
+or [mysql](https://hub.docker.com/_/mysql) then you will 
+need setup [WordPress](https://hub.docker.com/_/wordpress)
 
 ### Set up the network for your container
 ```shell
@@ -96,7 +96,6 @@ need to add sett up a [WordPress](https://hub.docker.com/_/wordpress)
        -v [path/to/wordpress]/gh-wp:/var/www/html \
       --name [wordpres-name] \
       -p 8080:80 \
-      -p 443:443 \
       -d wordpress
 ```
 
@@ -119,11 +118,11 @@ You need to do this so that you can accsess the wordpress rest-api
 - Go to permalinks in the settings menu
 - Change "Permalink structure" to "Day and name" (https://example.com/YYYY/MM/DD/sample-post/)
 
-### Change to code
-Change the url's of the feach recuests on 
-[article.js](front_end/js/article.js) (obs. there are two 
-in this file), [articles.js](front_end/js/articles.js), 
-and [index.js](front_end/js/index.js)
+### Changes to the code
+Change the url's of the fetch requests on 
+[index.js](front_end/js/index.js), 
+[article.js](front_end/js/article.js) (OBS. there are two 
+in this file) and [articles.js](front_end/js/articles.js), 
 
 ## License
 You are free to copy, modify, and distribute exam project 1
