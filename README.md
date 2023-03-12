@@ -100,8 +100,7 @@ need to add sett up a [WordPress](https://hub.docker.com/_/wordpress)
       -d wordpress
 ```
 
-### worpress setup
-when setting up the database:
+### worpress connecting to database
 - set database name to the value from MARIADB_DATABASE (from the db setup)
 - set username to the value from MARIADB_USER (from the db setup)
 - set password to the value from MARIADB_PASSWORD (from the db setup)
@@ -114,6 +113,11 @@ when setting up the database:
 - click "install now" and then "activate"
 - afterwords you can go to the "wp recipe maker" tab
 - go through the setup and add recipes
+
+### setting links
+you need to do this so that you can accsess the wordpress rest-api
+- go to permalinks in the settings menu
+- change "Permalink structure" to "Day and name" (https://example.com/YYYY/MM/DD/sample-post/)
 
 ### change to code
 change the url's of the feach recuests on 
