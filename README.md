@@ -1,6 +1,6 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/6cadece7-376e-4ed3-8df7-01112636b75b/deploy-status)](https://app.netlify.com/sites/joyful-halva-a4d44f/deploys)
 
-# [README: exam project 1](https://github.com/Noroff-FEU-Assignments/project-exam-1-Eirik-Haukeland)
+# [README: Exam Project 1](https://github.com/Noroff-FEU-Assignments/project-exam-1-Eirik-Haukeland)
 by [Eirik Berget Haukeland](https://github.com/Eirik-Haukeland)
 
 This is the code for the front end of my food blog
@@ -14,64 +14,64 @@ This is the code for the front end of my food blog
 ## get the code
 
 ### with gh cli tool
-you need to download gh cli tool [look here for informatin](https://github.com/cli/cli#installation)
+You need to download gh cli tool [look here for informatin](https://github.com/cli/cli#installation)
 
 Fork the repo:
 ``` shell
   $ gh repo fork git@github.com/Noroff-FEU-Assignments/project-exam-1-Eirik-Haukeland
 ```
 
-### with standard git cli
-you need to download git cli tool [look here for informatin](https://git-scm.com/downloads)
+### With standard git cli
+You need to download git cli tool [look here for informatin](https://git-scm.com/downloads)
 
-clone the repo:
+Clone the repo:
 ``` shell
   $ git clone git@github.com/Noroff-FEU-Assignments/project-exam-1-Eirik-Haukeland
 ```
 
-check the current remote:
+Check the current remote:
 ``` shell
   $ git remote -v
 ```
 
-set the new remote:
+Set the new remote:
 ``` shell
   $ git remote set-url origin http://newserver/myproject.git 
 ```
 
-verify that the remote has been sett properly:
+Verify that the remote has been sett properly:
 ``` shell
   $ git remote -v
 ```
 
-push to new repo:
+Push to new repo:
 ```shell
   $ git push origin master
 ```
 
-## hosing the front end
-once you have the repo you whil need to sett up the web host:
+## Hosing the front end
+Once you have the repo you whil need to sett up the web host:
 
-you migth use [GitHub pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site), 
+You migth use [GitHub pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site), 
 Netlify [se here](https://docs.netlify.com/get-started/), or 
 sett your own web server.
 
-be shure to set the front_end folder to the root folder
+Be shure to set the front_end folder to the root folder
 of the web page
 
-## setup cms whit docker
+## Setup cms whit docker
 I used WordPress with the "wp recipe maker" plugin
 
-you whil need a sql database like [mariadb](https://hub.docker.com/_/mariadb) 
+You whil need a sql database like [mariadb](https://hub.docker.com/_/mariadb) 
 or [mysql](https://hub.docker.com/_/mysql) then you whill 
 need to add sett up a [WordPress](https://hub.docker.com/_/wordpress)
 
-### set up the network for your container
+### Set up the network for your container
 ```shell
   $ docker network create [name-of-network]
 ```
 
-### set up the database (here we are using mariadb)
+### Set up the database (here we are using mariadb)
 ```shell
   $ mkdir [path/to/db]
 
@@ -87,7 +87,7 @@ need to add sett up a [WordPress](https://hub.docker.com/_/wordpress)
       mariadb:latest
 ```
 
-### set up the WordPress
+### Set up the WordPress
 ```shell
   $ mkdir [path/to/wordpress]
   
@@ -100,27 +100,27 @@ need to add sett up a [WordPress](https://hub.docker.com/_/wordpress)
       -d wordpress
 ```
 
-### worpress connecting to database
-- set database name to the value from MARIADB_DATABASE (from the db setup)
-- set username to the value from MARIADB_USER (from the db setup)
-- set password to the value from MARIADB_PASSWORD (from the db setup)
-- set database host to the value from name (from the db setup)
+### Worpress connecting to database
+- Set database name to the value from MARIADB_DATABASE (from the db setup)
+- Set username to the value from MARIADB_USER (from the db setup)
+- Set password to the value from MARIADB_PASSWORD (from the db setup)
+- Set database host to the value from name (from the db setup)
 
-### adding recipe plugin
-- go to plugins tab
-- click on "Add New"
-- search for "WP Recipe Maker"
-- click "install now" and then "activate"
-- afterwords you can go to the "wp recipe maker" tab
-- go through the setup and add recipes
+### Adding recipe plugin
+- Go to plugins tab
+- Click on "Add New"
+- Search for "WP Recipe Maker"
+- Click "install now" and then "activate"
+- Afterwords you can go to the "wp recipe maker" tab
+- Go through the setup and add recipes
 
-### setting links
-you need to do this so that you can accsess the wordpress rest-api
-- go to permalinks in the settings menu
-- change "Permalink structure" to "Day and name" (https://example.com/YYYY/MM/DD/sample-post/)
+### Setting permalinks
+You need to do this so that you can accsess the wordpress rest-api
+- Go to permalinks in the settings menu
+- Change "Permalink structure" to "Day and name" (https://example.com/YYYY/MM/DD/sample-post/)
 
-### change to code
-change the url's of the feach recuests on 
+### Change to code
+Change the url's of the feach recuests on 
 [article.js](front_end/js/article.js) (obs. there are two 
 in this file), [articles.js](front_end/js/articles.js), 
 and [index.js](front_end/js/index.js)
